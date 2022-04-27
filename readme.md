@@ -1,11 +1,6 @@
-# Getting Started with Create React App
+# García's Burgers - React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+García's Burgers es un restaurant de barrio en Uruguay, situado en el barrio de Carrasco, Montevideo. Aquí se venden hamburguesas, empanadas, milanesas y papas fritas. Este proyecto es con fines académicos y todos los derechos de imágenes de García's Burgers están reservados. La finalidad del proyecto es realizar un sitio de ecommerce utilizando React Js en el marco del curso de React Js de Coderhouse.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-hola
+## Proyecto Realizado por Gastón Carriquiry
+### Contacto: gastoncarriquiry@gmail.com
