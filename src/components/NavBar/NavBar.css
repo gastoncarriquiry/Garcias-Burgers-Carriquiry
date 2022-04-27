@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+
+.NavBar {
+  background-color: black;
+  color: #eaeaea;
+  width: 100%;
+  padding-top: 1.5em;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0em 1em;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.Nav-Logo {
+  width: 5%;
+}
+
+.links {
+  margin-bottom: 0.2em;
+}
+
+.links a {
+  color: #eaeaea;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+  margin-right: 0.5em;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.4s;
+}
+
+.links a:last-child {
+  margin-right: 0;
+}
+
+.links .active {
+  border-bottom: 3px solid #ba194b;
+}
+
+.links a:hover{
+  border-bottom: 3px solid #ba194b;
+}
+
+@media only screen and (min-width: 768px) {
+}
