@@ -14,6 +14,7 @@ function NavBar() {
           <a href="http://localhost:3000/">NOSOTROS</a>
           <a href="http://localhost:3000/">CONTACTO</a>
           //TODO: crear CartWidget -- hacer del carrito un componente
+          //TODO: cambiar los iconos
           <a href="http://localhost:3000/">
             <box-icon name="cart-alt" color="#eaeaea"></box-icon>
           </a>
