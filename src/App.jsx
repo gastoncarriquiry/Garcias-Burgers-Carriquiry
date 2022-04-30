@@ -1,10 +1,13 @@
-import './App.css';
-import NavBar from './components/NavBar/NavBar'
+import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
-    //TODO: crear ItemListContainer con prop greeting
-    <NavBar />
+    <>
+      <NavBar />
+      <ItemListContainer greeting="Bienvenid@ a García's Burgers" />
+    </>
   );
 }
 

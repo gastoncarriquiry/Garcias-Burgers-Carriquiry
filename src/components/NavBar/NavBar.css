@@ -5,56 +5,112 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  margin-top: 5em;
 }
 
 .NavBar {
   background-color: black;
   color: #eaeaea;
   width: 100%;
-  padding-top: 1.5em;
+  padding-top: 0.8em;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .container {
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0em 1em;
-  padding-bottom: 1.2em;
+  padding-bottom: 0.5em;
   border-bottom: 1px solid #eaeaea;
 }
 
 .Nav-Logo {
-  width: 5%;
+  width: 10%;
 }
 
 .links {
   margin-bottom: 0.2em;
+  order: 1;
+  display: none;
 }
 
-.links a {
+.links button {
+  font-size: 0.8em;
+  font-family: inherit;
   color: #eaeaea;
   font-weight: bold;
   text-decoration: none;
   padding: 0.3em 0.5em;
   margin-right: 0.5em;
+  cursor: pointer;
+  border: none;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.4s;
-}
-
-.links a:last-child {
-  margin-right: 0;
+  background-color: transparent;
 }
 
 .links .active {
   border-bottom: 3px solid #ba194b;
 }
 
-.links a:hover{
+.links button:hover {
   border-bottom: 3px solid #ba194b;
 }
 
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.Cart-Widget {
+  order: -1;
+  margin-right: 1.5em;
+}
+
+.menu button.hamburger {
+  order: 0;
+}
+
 @media only screen and (min-width: 768px) {
+  body {
+    margin-top: 10em;
+    font-size: 18px;
+  }
+
+  .Nav-Logo {
+    width: 5%;
+  }
+
+  .Cart-Widget {
+    order: 1;
+    margin-right: 0;
+  }
+
+  .links {
+    order: 0;
+    display: block;
+  }
+
+  .menu button.hamburger {
+    display: none;
+    order: 3;
+  }
+
+  .container {
+    padding-bottom: 1.2em;
+    width: 75%;
+  }
+
+  .NavBar {
+    padding-top: 1.5em;
+  }
 }

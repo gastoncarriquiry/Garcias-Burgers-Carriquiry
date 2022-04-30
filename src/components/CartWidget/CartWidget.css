@@ -1,0 +1,33 @@
+.qty-display {
+  width: 2em;
+  height: 2em;
+  box-sizing: border-box;
+  /* padding: 1em; */
+  border-radius: 100%;
+  background-color: #ba194b;
+  position: absolute;
+  text-align: center;
+  top: -0.3em;
+  right: -0.3em;
+  line-height: 2.2em;
+  font-size: 10px;
+}
+
+.Cart-Widget {
+  position: relative;
+  font-size: 0.8em;
+  font-family: inherit;
+  color: #eaeaea;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.4s;
+  background-color: transparent;
+}
+
+.Cart-Widget:hover {
+  border-bottom: 3px solid #ba194b;
+}
