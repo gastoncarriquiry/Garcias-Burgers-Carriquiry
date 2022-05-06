@@ -1,6 +1,11 @@
+main h1 {
+  text-align: center;
+}
+
 main {
-    text-align: center;
-    margin-top: 2em;
-    background-color: black;
-    color: #eaeaea;
+  margin-top: 2em;
+  background-color: black;
+  color: #eaeaea;
+  width: 90vw;
+  margin: auto
 }

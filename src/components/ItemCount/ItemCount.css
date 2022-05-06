@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.counter {
+  width: fit-content;
+  background-color: #eaeaea;
+  color: black;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.counter div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em auto;
+}
+
+.counter div button {
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  padding: 0em 0.3em;
+  cursor: pointer;
+  color: #ba194b;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#qty {
+  background-color: #cacaca;
+  box-sizing: border-box;
+  min-width: 2em;
+  text-align: center;
+  padding: 0.5em 0em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: default;
+}
+
+div ~ button {
+  border: 2px solid #ba194b;
+  background-color: #ba194b;
+  color: #eaeaea;
+  padding: 0.6em 1em;
+  border-radius: 5px;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+div ~ button:hover {
+  background-color: #eaeaea;
+  color: #ba194b;
+  border-color: #ba194b;
+}
+
+@media only screen and (min-width: 768px) {
+}
