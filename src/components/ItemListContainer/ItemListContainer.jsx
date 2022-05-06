@@ -1,10 +1,11 @@
+import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
-function ItemListContainer({ greeting, children }) {
+function ItemListContainer({ greeting }) {
   return (
     <main>
       <h1>{greeting}</h1>
-      {children}
+      <ItemList />
     </main>
   );
 }

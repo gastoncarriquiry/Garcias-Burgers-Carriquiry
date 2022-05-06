@@ -1,19 +1,19 @@
 import { useState } from "react";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, initial = 1 }) => {
+const ItemCount = ({ disponible = true, initial = 1, producto}) => {
   const [cantidad, setCantidad] = useState(initial);
 
-  if (stock === 0) {
+  if (disponible === false) {
     initial = 0;
     // TODO: botones disabled - texto "no hay stock"
   }
 
   const sumarProducto = () => {
-    if (cantidad < stock) {
+    if (cantidad < 99) {
       setCantidad(cantidad + 1);
-    } else if (cantidad === stock) {
-      console.log("No puede seleccionar más productos de los disponibles.");
+    } else if (cantidad === 99) {
+      console.log("No puede seleccionar más productos.");
     }
   };
 
@@ -29,13 +29,12 @@ const ItemCount = ({ stock, initial = 1 }) => {
     if (cantidad === 0) {
       console.log("Debe agregar al menos un producto");
     } else {
-      console.log("¡" + cantidad + " producto/s agregados exitosamente!");
+      console.log(`¡${cantidad} ${producto} agregados exitosamente!"`);
     }
   };
 
   return (
     <div className="counter">
-      <p>Stock disponible: {stock}</p>
       <div>
         <button onClick={restarProducto}>-</button>
         <h2 id="qty">{cantidad}</h2>

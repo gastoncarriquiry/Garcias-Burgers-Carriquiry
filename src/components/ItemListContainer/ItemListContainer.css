@@ -1,11 +1,18 @@
 main h1 {
   text-align: center;
+  color: #eaeaea;
+  margin-bottom: 1em;
 }
 
 main {
   margin-top: 2em;
-  background-color: black;
-  color: #eaeaea;
-  width: 90vw;
-  margin: auto
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 70vw;
+  }
 }

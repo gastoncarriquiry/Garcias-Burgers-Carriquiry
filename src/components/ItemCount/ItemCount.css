@@ -5,10 +5,9 @@
 
 .counter {
   width: fit-content;
-  background-color: #eaeaea;
   color: black;
-  padding: 1em;
   box-sizing: border-box;
+  padding: 1em;
 }
 
 .counter div {
@@ -40,7 +39,7 @@
   cursor: default;
 }
 
-div ~ button {
+.counter div ~ button {
   border: 2px solid #ba194b;
   background-color: #ba194b;
   color: #eaeaea;
@@ -52,7 +51,7 @@ div ~ button {
   width: 100%;
 }
 
-div ~ button:hover {
+.counter div ~ button:hover {
   background-color: #eaeaea;
   color: #ba194b;
   border-color: #ba194b;
