@@ -19,6 +19,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
+  box-shadow: -20px 0px 5px rgba(0, 0, 0, 1);
 }
 
 .container {
@@ -40,6 +41,14 @@ body {
   margin-bottom: 0.2em;
   order: 1;
   display: none;
+  position: absolute;
+  top: 51px;
+  right: 0;
+  background-color: black;
+  /* transition: 0.5s; */
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.55);
 }
 
 .links button {
@@ -48,27 +57,26 @@ body {
   color: #eaeaea;
   font-weight: bold;
   text-decoration: none;
-  padding: 0.3em 0.5em;
-  margin-right: 0.5em;
   cursor: pointer;
+  display: block;
   border: none;
   border-bottom: 3px solid transparent;
-  transition: border-bottom 0.4s;
+  transition: 0.3s;
+  padding: 1.2em 2em;
+  margin: auto;
+  width: 100%;
   background-color: transparent;
 }
 
-.links .active {
-  border-bottom: 3px solid #ba194b;
-}
-
 .links button:hover {
-  border-bottom: 3px solid #ba194b;
+  background-color: #ba194b;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  position: relative;
 }
 
 .Cart-Widget {
@@ -98,6 +106,23 @@ body {
   .links {
     order: 0;
     display: block;
+    position: relative;
+    background-color: transparent;
+    top: initial;
+    right: initial;
+    overflow: visible;
+  }
+
+  .links button {
+    padding: 0.3em 0.5em;
+    margin-right: 0.5em;
+    display: inline-block;
+    width: auto;
+  }
+
+  .links button:hover {
+    background-color: transparent;
+    border-bottom: 3px solid #ba194b;
   }
 
   .menu button.hamburger {
@@ -112,5 +137,9 @@ body {
 
   .NavBar {
     padding-top: 1.5em;
+  }
+
+  .links .active {
+    border-bottom: 3px solid #ba194b;
   }
 }

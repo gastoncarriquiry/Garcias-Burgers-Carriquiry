@@ -1,46 +1,50 @@
 import { useState } from "react";
 import "./ItemCount.css";
 
-const ItemCount = ({ disponible = true, initial = 1, producto}) => {
-  const [cantidad, setCantidad] = useState(initial);
+const ItemCount = ({ available, initial, product, onAdd }) => {
+  const [quantity, setQuantity] = useState(initial);
 
-  if (disponible === false) {
+  if (available === false) {
     initial = 0;
     // TODO: botones disabled - texto "no hay stock"
   }
 
-  const sumarProducto = () => {
-    if (cantidad < 99) {
-      setCantidad(cantidad + 1);
-    } else if (cantidad === 99) {
-      console.log("No puede seleccionar más productos.");
+  const sumProduct = () => {
+    if (quantity <= 49) {
+      // USO CANTIDAD LIMITADA POR 50 PORQUE HABLAMOS DE COMIDA Y NO TIENE STOCK PORQUE SE PREPARAN EN EL MOMENTO
+      setQuantity(quantity + 1);
+      if (quantity === 50) {
+        console.log("No puede seleccionar más productos.");
+      }
     }
   };
 
-  const restarProducto = () => {
-    if (cantidad > 1) {
-      setCantidad(cantidad - 1);
-    } else if (cantidad === 1) {
+  const subtractProduct = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    } else if (quantity === 1) {
       console.log("Debe seleccionar al menos un producto.");
     }
   };
 
-  const agregarProducto = () => {
-    if (cantidad === 0) {
+  const addProduct = () => {
+    if (quantity === 0) {
       console.log("Debe agregar al menos un producto");
     } else {
-      console.log(`¡${cantidad} ${producto} agregados exitosamente!"`);
+      console.log(`¡${quantity} ${product} agregados exitosamente!"`);
     }
   };
 
   return (
     <div className="counter">
       <div>
-        <button onClick={restarProducto}>-</button>
-        <h2 id="qty">{cantidad}</h2>
-        <button onClick={sumarProducto}>+</button>
+        <button onClick={subtractProduct}>-</button>
+        <h2 id="qty">{quantity}</h2>
+        <button onClick={sumProduct}>+</button>
       </div>
-      <button onClick={agregarProducto} id="btn_agregar">Agregar al carrito</button>
+      <button onClick={addProduct} id="btn_agregar">
+        Agregar al carrito
+      </button>
     </div>
   );
 };

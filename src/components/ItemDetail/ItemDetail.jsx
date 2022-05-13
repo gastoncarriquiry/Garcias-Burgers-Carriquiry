@@ -1,12 +1,9 @@
-import ItemCount from "../ItemCount/ItemCount";
-import "./Item.css";
+import "./ItemDetail.css";
 
-const Item = ({ item }) => {
+const ItemDetail = ({ item }) => {
   const { id, title, description, picURL, price, available, initial } = item;
-
-    return (
-    //TODO: Arreglar estilos, counter, etc
-    <article className="item" key={id}>
+  return (
+    <article className="item-detail" key={id}>
       <img src={picURL} alt="Imagen de producto" />
       <div className="item-text">
         <h2>{title}</h2>
@@ -15,9 +12,8 @@ const Item = ({ item }) => {
           <b>$ {price}</b>
         </p>
       </div>
-      <ItemCount available={available} initial={initial} product={title} />
     </article>
   );
 };
 
-export default Item;
+export default ItemDetail;

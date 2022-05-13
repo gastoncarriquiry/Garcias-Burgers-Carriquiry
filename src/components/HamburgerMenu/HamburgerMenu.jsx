@@ -2,21 +2,17 @@ import "./HamburgerMenu.css";
 
 function HamburgerMenu() {
   const hamburgerAction = () => {
-    document.addEventListener("DOMContentLoaded", function () {
-      document
-        .querySelector("#nav")
-        .addEventListener("click", () =>
-          document.querySelector("#nav").classList.toggle("is-active")
-        );
-    });
+    const nav = document.querySelector("#nav");
+    nav.classList.toggle("is-active");
+    if(nav.classList.contains("is-active")) {
+      document.querySelector(".links").style.display = 'block';
+    } else {
+      document.querySelector(".links").style.display = 'none';
+    }
   };
+
   return (
-    <button
-      className="nav-toggle hamburger--collapse hamburger"
-      id="nav"
-      type="button"
-      onClick={hamburgerAction()}
-    >
+    <button className="nav-toggle hamburger--collapse hamburger" id="nav" type="button" onClick={hamburgerAction}>
       <span className="hamburger-box">
         <span className="hamburger-inner"></span>
       </span>

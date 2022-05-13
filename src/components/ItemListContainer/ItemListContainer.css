@@ -11,8 +11,23 @@ main {
   margin: auto;
 }
 
+.loader {
+  width: fit-content;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 768px) {
   main {
     width: 70vw;
+  }
+
+  .item-list {
+    flex-direction: row;
   }
 }
