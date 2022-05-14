@@ -2,7 +2,7 @@
   border: 2px solid var(--primary-color);
   background-color: var(--primary-color);
   color: var(--light-color);
-  padding: 0.6em 1em;
+  padding: 1em 1.5em;
   border-radius: 5px;
   font-family: "Josefin Sans", sans-serif;
   cursor: pointer;

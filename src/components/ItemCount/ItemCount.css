@@ -14,18 +14,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0.5em auto;
+  margin: 1.2em auto;
 }
 
 .counter div button {
   background-color: transparent;
   border: none;
   font-size: 2em;
-  padding: 0em 0.3em;
+  line-height: 1em;
+  /* padding: 0em 0.3em; */
+  width: 1.2em;
+  border-radius: 5px;
+  height: 1.2em;
+  box-sizing: border-box;
   cursor: pointer;
   color: var(--primary-color);
   font-weight: bold;
   font-family: "Josefin Sans", sans-serif;
+  transition: 0.3s;
+}
+
+.counter div button:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
 }
 
 .counter div button:disabled {
@@ -33,7 +43,7 @@
 }
 
 #qty {
-  background-color: #cacaca;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   min-width: 2em;
   text-align: center;

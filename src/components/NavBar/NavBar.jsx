@@ -10,18 +10,21 @@ function NavBar() {
   window.onscroll = function () {
     if (mediaQuery.matches) {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.querySelector(".Nav-Logo").style.width = "6%";
+        document.querySelector(".Brand-Logo").style.minWidth = "4%";
+        document.querySelector(".Brand-Logo").style.height = "60px";
         document.querySelector(".container").style.paddingBottom = "0.5em";
         document.querySelector(".NavBar").style.height = "3em";
         document.querySelector(".NavBar").style.backgroundColor = "rgba(0, 0, 0, 0.87)";
       } else {
-        document.querySelector(".Nav-Logo").style.width = "10%";
+        document.querySelector(".Brand-Logo").style.minWidth = "6%";
+        document.querySelector(".Brand-Logo").style.height = "96px";
         document.querySelector(".container").style.paddingBottom = "0.5em";
         document.querySelector(".NavBar").style.height = "5em";
         document.querySelector(".NavBar").style.backgroundColor = "black";
       }
     } else {
-      document.querySelector(".Nav-Logo").style.width = "25%";
+      document.querySelector(".Brand-Logo").style.minWidth = "52%";
+      document.querySelector(".Brand-Logo").style.height = "52%";
       document.querySelector(".container").style.paddingBottom = "0.5em";
       document.querySelector(".NavBar").style.height = "5em";
       document.querySelector(".NavBar").style.backgroundColor = "black";

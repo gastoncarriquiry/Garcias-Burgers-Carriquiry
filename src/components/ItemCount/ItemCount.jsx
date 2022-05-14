@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../../Button/Button";
+import Button from "../Button/Button";
 import "./ItemCount.css";
 
 const ItemCount = ({ available, initial, product, onAdd }) => {

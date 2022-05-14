@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../../Button/Button";
+import Button from "../../components/Button/Button";
 import "./Item.css";
 
 const Item = ({ item }) => {
@@ -11,7 +11,7 @@ const Item = ({ item }) => {
       <div className="item-container">
         <div className="item-text">
           <h2>{title}</h2>
-          <p className="extras">guarnición de papas fritas incluidas</p>
+          <p className="extras">{extras}</p>
           <p className="price">
             <b>$ {price}</b>
           </p>

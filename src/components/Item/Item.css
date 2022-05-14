@@ -26,8 +26,12 @@
 }
 
 .item-text h2 {
-  font-size: 1.25em;
+  font-size: 1em;
   text-transform: uppercase;
+}
+
+.item-text h2::before {
+  content: "_";
 }
 
 .item-text .extras {
