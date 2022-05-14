@@ -1,13 +1,9 @@
 import { useState } from "react";
+import Button from "../../Button/Button";
 import "./ItemCount.css";
 
 const ItemCount = ({ available, initial, product, onAdd }) => {
   const [quantity, setQuantity] = useState(initial);
-
-  if (available === false) {
-    initial = 0;
-    // TODO: botones disabled - texto "no hay stock"
-  }
 
   const sumProduct = () => {
     if (quantity <= 49) {
@@ -36,16 +32,27 @@ const ItemCount = ({ available, initial, product, onAdd }) => {
   };
 
   return (
-    <div className="counter">
-      <div>
-        <button onClick={subtractProduct}>-</button>
-        <h2 id="qty">{quantity}</h2>
-        <button onClick={sumProduct}>+</button>
-      </div>
-      <button onClick={addProduct} id="btn_agregar">
-        Agregar al carrito
-      </button>
-    </div>
+    <>
+      {available ? (
+        <div className="counter">
+          <div>
+            <button onClick={subtractProduct}>-</button>
+            <h2 id="qty">{quantity}</h2>
+            <button onClick={sumProduct}>+</button>
+          </div>
+          <Button click={addProduct} text="Agregar al Carrito" disabled={false}/>
+        </div>
+      ) : (
+        <div className="counter disabled">
+          <div className="disabled">
+            <button onClick={subtractProduct} disabled>-</button>
+            <h2 id="qty">{quantity}</h2>
+            <button onClick={sumProduct} disabled>+</button>
+          </div>
+          <Button click={addProduct} text="Agregar al Carrito" disabled={true}/>
+        </div>
+      )}
+    </>
   );
 };
 

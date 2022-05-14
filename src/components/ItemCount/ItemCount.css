@@ -5,7 +5,7 @@
 
 .counter {
   width: fit-content;
-  color: black;
+  color: var(--dark-color);
   box-sizing: border-box;
   padding: 1em;
 }
@@ -23,9 +23,13 @@
   font-size: 2em;
   padding: 0em 0.3em;
   cursor: pointer;
-  color: #ba194b;
+  color: var(--primary-color);
   font-weight: bold;
   font-family: "Josefin Sans", sans-serif;
+}
+
+.counter div button:disabled {
+  cursor: not-allowed;
 }
 
 #qty {
@@ -39,22 +43,8 @@
   cursor: default;
 }
 
-.counter div ~ button {
-  border: 2px solid #ba194b;
-  background-color: #ba194b;
-  color: #eaeaea;
-  padding: 0.6em 1em;
-  border-radius: 5px;
-  font-family: "Josefin Sans", sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
-}
-
-.counter div ~ button:hover {
-  background-color: #eaeaea;
-  color: #ba194b;
-  border-color: #ba194b;
+.disabled {
+  opacity: 0.6;
 }
 
 @media only screen and (min-width: 768px) {

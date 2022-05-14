@@ -1,14 +1,14 @@
 main h1 {
   text-align: center;
-  color: #eaeaea;
+  color: var(--dark-color);
   margin-bottom: 1em;
 }
 
 main {
-  margin-top: 2em;
+  margin: auto;
+  margin-top: 7em;
   width: 100vw;
   height: 100vh;
-  margin: auto;
 }
 
 .loader {
@@ -24,10 +24,12 @@ main {
 
 @media only screen and (min-width: 768px) {
   main {
-    width: 70vw;
+    width: 75vw;
   }
 
   .item-list {
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

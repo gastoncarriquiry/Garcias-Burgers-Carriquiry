@@ -1,0 +1,29 @@
+.btn {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 0.6em 1em;
+  border-radius: 5px;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}

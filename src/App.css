@@ -1,9 +1,12 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #ba194b;
+  --background-color: #eaeaea;
+  --light-color: white;
+  --dark-color: black;
 }
 
-body {
-  background-color: black;
+.App {
+  text-align: center;
 }
 
 .App-logo {

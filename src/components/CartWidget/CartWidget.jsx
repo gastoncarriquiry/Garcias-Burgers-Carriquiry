@@ -3,7 +3,7 @@ import "./CartWidget.css";
 
 function CartWidget() {
   return (
-    <button className='Cart-Widget'>
+    <button className='Cart-Widget-button'>
       <IoCartOutline size="2em" />
       <span className="qty-display">0</span>
     </button>

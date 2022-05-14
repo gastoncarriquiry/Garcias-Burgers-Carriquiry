@@ -17,24 +17,34 @@ body {
   position: fixed;
   z-index: 200;
   top: 0;
+  height: 5em;
   right: 0;
   left: 0;
-  box-shadow: -20px 0px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
 }
 
 .container {
   width: 85%;
+  height: inherit;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0em 1em;
+  box-sizing: border-box;
   padding-bottom: 0.5em;
   border-bottom: 1px solid #eaeaea;
+  transition: 0.3s;
+}
+
+.Brand-Logo {
+  width: 60% !important;
 }
 
 .Nav-Logo {
-  width: 10%;
+  width: 25%;
+  transition: 0.3s;
 }
 
 .links {
@@ -45,7 +55,6 @@ body {
   top: 51px;
   right: 0;
   background-color: black;
-  /* transition: 0.5s; */
   border-radius: 0 0 5px 5px;
   overflow: hidden;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.55);
@@ -94,13 +103,13 @@ body {
     font-size: 18px;
   }
 
-  .Nav-Logo {
-    width: 5%;
-  }
-
   .Cart-Widget {
     order: 1;
     margin-right: 0;
+  }
+
+  .Nav-Logo {
+    width: 8%;
   }
 
   .links {
@@ -111,6 +120,7 @@ body {
     top: initial;
     right: initial;
     overflow: visible;
+    box-shadow: none;
   }
 
   .links button {
@@ -139,7 +149,7 @@ body {
     padding-top: 1.5em;
   }
 
-  .links .active {
+  .links .active button {
     border-bottom: 3px solid #ba194b;
   }
 }

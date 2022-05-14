@@ -3,22 +3,34 @@ import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { Waveform } from "@uiball/loaders";
 import { mockFetch } from "../../mockFetch";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer({ greeting }) {
+function ItemListContainer() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  //TODO: loader not working
+
+  const { category } = useParams();
+
   useEffect(() => {
-    //TODO: agregar un if para filtrar por tipo de comida
-    mockFetch()
-      .then((res) => setItems(res))
-      .catch((err) => console.error(err))
-      .finally(() => setLoading(false));
-  }, []);
+    if (category) {
+      mockFetch()
+        .then((res) => setItems(res.filter((item) => item.category === category)))
+        .catch((err) => console.error(err))
+        .finally(() => setLoading(false));
+    } else {
+      mockFetch()
+        .then((res) => setItems(res))
+        .catch((err) => console.error(err))
+        .finally(() => setLoading(false));
+    }
+  }, [category]);
 
   return (
     <main>
-      <h1>{greeting}</h1>
+      {/* TODO: add secondary NavBar for filtering categories  */}
+      <h1>MENÚ</h1>
       <section className="item-list">
         {loading ? (
           <div className="loader">
