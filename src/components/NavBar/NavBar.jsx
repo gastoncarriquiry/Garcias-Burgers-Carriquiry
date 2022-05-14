@@ -23,8 +23,8 @@ function NavBar() {
         document.querySelector(".NavBar").style.backgroundColor = "black";
       }
     } else {
-      document.querySelector(".Brand-Logo").style.minWidth = "52%";
-      document.querySelector(".Brand-Logo").style.height = "52%";
+      document.querySelector(".Brand-Logo").style.minWidth = "15%";
+      document.querySelector(".Brand-Logo").style.height = "65px";
       document.querySelector(".container").style.paddingBottom = "0.5em";
       document.querySelector(".NavBar").style.height = "5em";
       document.querySelector(".NavBar").style.backgroundColor = "black";
@@ -45,10 +45,10 @@ function NavBar() {
             <NavLink to="/menu">
               <button>MENÚ</button>
             </NavLink>
-            <NavLink to="/404">
+            <NavLink to="/nosotros">
               <button>NOSOTROS</button>
             </NavLink>
-            <NavLink to="/404">
+            <NavLink to="/contacto">
               <button>CONTACTO</button>
             </NavLink>
           </nav>

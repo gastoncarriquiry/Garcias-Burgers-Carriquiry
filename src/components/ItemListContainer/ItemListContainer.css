@@ -6,7 +6,7 @@ main h1 {
 
 main {
   margin: auto;
-  margin-top: 7em;
+  margin-top: 5.8em;
   width: 100vw;
   height: 100vh;
 }
@@ -23,13 +23,11 @@ main {
 }
 
 @media only screen and (min-width: 768px) {
-  main {
-    width: 75vw;
-  }
-
   .item-list {
+    margin: auto;
+    width: 75vw;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 }

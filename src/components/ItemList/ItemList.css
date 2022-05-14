@@ -3,10 +3,13 @@
   padding: 0;
 }
 
-.item {
-  width: 32%;
-}
+@media only screen and (min-width: 768px) {
+  .item {
+    width: 32%;
+  }
 
-.item:nth-child(3n + 3), .item:last-child {
-  margin-right: 0;
+  .item:nth-child(3n + 3),
+  .item:last-child {
+    margin-right: 0;
+  }
 }

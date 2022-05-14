@@ -3,7 +3,8 @@ import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { Waveform } from "@uiball/loaders";
 import { mockFetch } from "../../mockFetch";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import SecondaryNavBar from "../SecondaryNavBar/SecondaryNavBar";
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
@@ -29,8 +30,7 @@ function ItemListContainer() {
 
   return (
     <main>
-      {/* TODO: add secondary NavBar for filtering categories  */}
-      <h1>MENÚ</h1>
+      <SecondaryNavBar />
       <section className="item-list">
         {loading ? (
           <div className="loader">

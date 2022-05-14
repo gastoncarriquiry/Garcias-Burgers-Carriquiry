@@ -26,7 +26,7 @@ export const itemList = [
   {
     id: "americana",
     title: "Americana",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description:
       "150 grs de carne, lechuga, tomate, cebolla colorada, huevo duro, cheddar, pepinillos, ketchup.",
     picURL: "https://picsum.photos/200",
@@ -38,7 +38,7 @@ export const itemList = [
   {
     id: "mexicana",
     title: "Mexicana",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description: "150 grs de carne, cebolla colorada, queso emmental, morrón, mayonesa, tabasco.",
     picURL: "https://picsum.photos/200",
     extras: "Guarnición de papas fritas incluida.",
@@ -49,7 +49,7 @@ export const itemList = [
   {
     id: "roque",
     title: "Roque",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description: "150 grs de carne, tomate, cebolla caramelizada, crema roquefort, bacon crocante.",
     picURL: "https://picsum.photos/200",
     extras: "Guarnición de papas fritas incluida.",
@@ -60,7 +60,7 @@ export const itemList = [
   {
     id: "doble",
     title: "Doble",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description: "250 grs de carne, queso emmental, queso cheddar, doble bacon, mayonesa.",
     picURL: "https://picsum.photos/200",
     extras: "Guarnición de papas fritas incluida.",
@@ -71,7 +71,7 @@ export const itemList = [
   {
     id: "garcias",
     title: "Garcia's",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description:
       "300 grs de carne, cebolla, bacon, salsa barbacoa, queso muzzarella, queso cheddar, tomate.",
     picURL: "https://picsum.photos/200",
@@ -83,7 +83,7 @@ export const itemList = [
   {
     id: "vegetariana",
     title: "Vegetariana",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description: "Burger de garbanzo, tomate, queso de cabra, dátiles, mayonesa.",
     picURL: "https://picsum.photos/200",
     extras: "Guarnición de papas fritas incluida.",
@@ -94,7 +94,7 @@ export const itemList = [
   {
     id: "veggie",
     title: "Veggie",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description: "Burger de garbanzo, lechuga, tomate, cebolla, repollo colorado, mostaza.",
     picURL: "https://picsum.photos/200",
     extras: "Guarnición de papas fritas incluida.",
@@ -105,7 +105,7 @@ export const itemList = [
   {
     id: "infantil",
     title: "Infantil",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description: "100 grs de carne, queso cheddar, ketchup.",
     picURL: "https://picsum.photos/200",
     extras: "Guarnición de papas fritas incluida.",
@@ -116,7 +116,7 @@ export const itemList = [
   {
     id: "caramelizada",
     title: "Caramelizada",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description:
       "150 grs de carne, queso cheddar, cebolla caramelizada, bacon, huevo frito, salsa barbacoa.",
     picURL: "https://picsum.photos/200",
@@ -128,7 +128,7 @@ export const itemList = [
   {
     id: "somerset",
     title: "Somerset",
-    category: "hamburgesas",
+    category: "hamburguesas",
     description: "280 grs de carne en 4 burgers, queso cheddar (x4), ketchup.",
     picURL: "https://picsum.photos/200",
     extras: "Guarnición de papas fritas incluida.",
