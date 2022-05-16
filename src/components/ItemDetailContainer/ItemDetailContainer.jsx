@@ -10,20 +10,23 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
+
   useEffect(() => {
+    setLoading(true);
+
     mockFetch(id)
       .then((res) => setItem(res))
       .catch((err) => console.log(err))
       .finally(setLoading(false));
   }, [id]);
 
-  //TODO: preguntar porque no anda el loading
+  //TODO: preguntar porque muestra el loading poco tiempo y me devuelve un undefined y después carga completo
 
   return (
     <section className="item-detail-container">
       {loading ? (
         <div className="loader">
-          <Waveform color="white" />
+          <Waveform color="black" />
         </div>
       ) : (
         <ItemDetail key={item.id} item={item} />

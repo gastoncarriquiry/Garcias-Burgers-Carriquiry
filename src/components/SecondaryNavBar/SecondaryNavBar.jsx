@@ -16,8 +16,11 @@ const SecondaryNavBar = () => {
       <NavLink to="/menu/empanadas">
         <button className="secondary-nav-button">Empanadas</button>
       </NavLink>
-      <NavLink to="/menu/papas">
-        <button className="secondary-nav-button">Papas</button>
+      <NavLink to="/menu/acompaniamientos">
+        <button className="secondary-nav-button">Acompañamientos</button>
+      </NavLink>
+      <NavLink to="/menu/postres">
+        <button className="secondary-nav-button">Postres</button>
       </NavLink>
       <NavLink to="/menu/bebidas">
         <button className="secondary-nav-button">Bebidas</button>

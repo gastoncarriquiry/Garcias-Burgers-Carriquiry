@@ -15,6 +15,8 @@ function ItemListContainer() {
   const { category } = useParams();
 
   useEffect(() => {
+    setLoading(true);
+
     if (category) {
       mockFetch()
         .then((res) => setItems(res.filter((item) => item.category === category)))
@@ -34,7 +36,7 @@ function ItemListContainer() {
       <section className="item-list">
         {loading ? (
           <div className="loader">
-            <Waveform color="white" />
+            <Waveform color="black" />
           </div>
         ) : (
           <ItemList items={items} />

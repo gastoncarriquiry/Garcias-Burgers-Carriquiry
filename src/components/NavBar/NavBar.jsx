@@ -17,7 +17,7 @@ function NavBar() {
         document.querySelector(".NavBar").style.backgroundColor = "rgba(0, 0, 0, 0.87)";
       } else {
         document.querySelector(".Brand-Logo").style.minWidth = "6%";
-        document.querySelector(".Brand-Logo").style.height = "96px";
+        document.querySelector(".Brand-Logo").style.height = "92px";
         document.querySelector(".container").style.paddingBottom = "0.5em";
         document.querySelector(".NavBar").style.height = "5em";
         document.querySelector(".NavBar").style.backgroundColor = "black";
