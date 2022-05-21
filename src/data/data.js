@@ -561,7 +561,7 @@ export const itemList = [
   {
     id: "fritas",
     title: "Papas Fritas",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de papas fritas.",
     picURL: "https://i.postimg.cc/FsVgtqXM/papas-Fritas.png",
     extras: "",
@@ -572,7 +572,7 @@ export const itemList = [
   {
     id: "fritasCheddarPanceta",
     title: "Fritas con Cheddar y Panceta",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de papas fritas con queso cheddar y trozos de panceta.",
     picURL: "https://i.postimg.cc/X7bczWmK/papas-Cheddar-Bacon.png",
     extras: "",
@@ -583,7 +583,7 @@ export const itemList = [
   {
     id: "rusticasCheddarPanceta",
     title: "Rústicas con Cheddar y Panceta",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de papas rústicas con queso cheddar y trozos de panceta.",
     picURL: "https://picsum.photos/200",
     extras: "",
@@ -594,7 +594,7 @@ export const itemList = [
   {
     id: "fritasPancetaCarne",
     title: "Fritas con Cheddar, Panceta y Carne",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de papas fritas con queso cheddar y trozos de panceta y carne.",
     picURL: "https://picsum.photos/200",
     extras: "",
@@ -605,7 +605,7 @@ export const itemList = [
   {
     id: "rusticasPancetaCarne",
     title: "Rústicas con Cheddar, Panceta y Carne",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de papas rústicas con queso cheddar y trozos de panceta y carne.",
     picURL: "https://picsum.photos/200",
     extras: "",
@@ -616,7 +616,7 @@ export const itemList = [
   {
     id: "bastonesMuzzarella",
     title: "Bastones de Muzzarella",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de bastones de queso muzzarella.",
     picURL: "https://i.postimg.cc/QxtvVpNn/baston-Muzzarella.png",
     extras: "",
@@ -627,7 +627,7 @@ export const itemList = [
   {
     id: "arosCebolla",
     title: "Aros de Cebolla",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de aros de cebolla.",
     picURL: "https://i.postimg.cc/9fT6CCXm/aros-Cebolla.png",
     extras: "",
@@ -638,7 +638,7 @@ export const itemList = [
   {
     id: "rusticas",
     title: "Papas Rústicas",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de papas rústicas.",
     picURL: "https://i.postimg.cc/Z5YPJcTC/papas-Rusticas.png",
     extras: "",
@@ -649,7 +649,7 @@ export const itemList = [
   {
     id: "fritasChampi",
     title: "Papas Champi",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de papas fritas con crema de champiñones.",
     picURL: "https://picsum.photos/200",
     extras: "",
@@ -660,7 +660,7 @@ export const itemList = [
   {
     id: "nuggets",
     title: "Nuggets",
-    category: "acompaniamientos",
+    category: "acompañamientos",
     description: "Porción de nuggets de pollo (12 unidades).",
     picURL: "https://i.postimg.cc/d1ZmzVJ6/nuggets.png",
     extras: "",

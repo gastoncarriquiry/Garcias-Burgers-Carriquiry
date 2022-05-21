@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./ItemCount.css";
 
 const ProductAdded = () => {
+  //TODO: Fix Button width
   return (
     <div className="buttons">
       <Link to="/menu">

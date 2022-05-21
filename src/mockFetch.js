@@ -5,6 +5,6 @@ export const mockFetch = (id) => {
     setTimeout(() => {
       const query = id ? itemList.find((item) => item.id === id) : itemList;
       resolve(query);
-    }, 2000);
+    }, 500);
   });
 };
