@@ -52,7 +52,7 @@ function NavBar() {
               <button>CONTACTO</button>
             </NavLink>
           </nav>
-          <NavLink className="Cart-Widget" to="/cart">
+          <NavLink className="Cart-Widget" to="/carrito">
             <CartWidget />
           </NavLink>
         </div>

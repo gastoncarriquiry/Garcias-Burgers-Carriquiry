@@ -1,8 +1,16 @@
 import "./ItemDetail.css";
 import ItemCount from ".././ItemCount/ItemCount";
+import { useState } from "react";
 
 const ItemDetail = ({ item }) => {
   const { id, title, category, description, extras, picURL, price, available, initial } = item;
+  const [count, setCount] = useState(undefined);
+
+  const onAdd = (qty) => {
+    console.log(qty);
+    setCount(qty);
+  };
+
   return (
     <article className="item-detail" key={id}>
       <img src={picURL} alt={`Imagen de ${category} ${title}`} />
@@ -16,7 +24,11 @@ const ItemDetail = ({ item }) => {
             <b>$ {price}</b>
           </p>
         </div>
-        <ItemCount available={available} initial={initial} product={title} />
+        {count === undefined ? (
+          <ItemCount available={available} initial={initial} onAdd={onAdd} />
+        ) : (
+          <ItemCount available={available} initial={initial} onAdd={onAdd} />
+        )}
       </div>
     </article>
   );

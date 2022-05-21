@@ -84,6 +84,10 @@ body {
   background-color: #ba194b;
 }
 
+.links a {
+  text-decoration: none;
+}
+
 .menu {
   display: flex;
   flex-direction: row;

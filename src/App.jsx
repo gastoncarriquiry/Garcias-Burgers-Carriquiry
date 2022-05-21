@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import Home from "./components/Home/Home";
-import Cart from "./components/Cart/Cart";
-import Error404 from "./components/Error404/Error404";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
+import Home from "./layout/Home/Home";
+import Cart from "./layout/Cart/Cart";
+import Error404 from "./layout/Error404/Error404";
+import About from "./layout/About/About";
+import Contact from "./layout/Contact/Contact";
 //TODO: HOME, ABOUT page, error404, contact form, Footer
 function App() {
   return (

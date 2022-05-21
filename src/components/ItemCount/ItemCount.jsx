@@ -1,9 +1,27 @@
 import { useState } from "react";
-import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 import "./ItemCount.css";
 
-const ItemCount = ({ available, initial, product, onAdd }) => {
+const ProductAdded = () => {
+  return (
+    <div className="buttons">
+      <Link to="/menu">
+        <button className="btn">Pedir Más</button>
+      </Link>
+      <Link to="/carrito">
+        <button className="btn finish">Finalizar Pedido</button>
+      </Link>
+    </div>
+  );
+};
+
+const ItemCount = ({ available, initial, onAdd }) => {
   const [quantity, setQuantity] = useState(initial);
+  const [state, setState] = useState("notDone");
+
+  const nextStep = () => {
+    setState("done");
+  };
 
   const sumProduct = () => {
     if (quantity <= 49) {
@@ -23,33 +41,41 @@ const ItemCount = ({ available, initial, product, onAdd }) => {
     }
   };
 
-  const addProduct = () => {
-    if (quantity === 0) {
-      console.log("Debe agregar al menos un producto");
-    } else {
-      console.log(`¡${quantity} ${product} agregados exitosamente!"`);
-    }
-  };
-
   return (
     <>
       {available ? (
-        <div className="counter">
-          <div>
-            <button onClick={subtractProduct}>-</button>
-            <h2 id="qty">{quantity}</h2>
-            <button onClick={sumProduct}>+</button>
+        state === "notDone" ? (
+          <div className="counter">
+            <div>
+              <button onClick={subtractProduct}>-</button>
+              <h2 id="qty">{quantity}</h2>
+              <button onClick={sumProduct}>+</button>
+            </div>
+            <button
+              onClick={() => {
+                onAdd(quantity);
+                nextStep();
+              }}
+              className="btn"
+            >
+              Agregar al Carrito
+            </button>
           </div>
-          <Button click={addProduct} text="Agregar al Carrito" disabled={false}/>
-        </div>
+        ) : (
+          <ProductAdded />
+        )
       ) : (
         <div className="counter disabled">
           <div className="disabled">
-            <button onClick={subtractProduct} disabled>-</button>
+            <button onClick={subtractProduct} disabled>
+              -
+            </button>
             <h2 id="qty">{quantity}</h2>
-            <button onClick={sumProduct} disabled>+</button>
+            <button onClick={sumProduct} disabled>
+              +
+            </button>
           </div>
-          <Button click={addProduct} text="Agregar al Carrito" disabled={true}/>
+          <button className="btn disabled">Agregar al Carrito</button>
         </div>
       )}
     </>
