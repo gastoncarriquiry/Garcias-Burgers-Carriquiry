@@ -4,10 +4,11 @@ import "./CartWidget.css";
 
 function CartWidget() {
   const { getQuantity } = useCartContext();
+  let totalQuantity = getQuantity();
   return (
     <button className="Cart-Widget-button">
       <IoCartOutline size="2em" />
-      <span className="qty-display">{getQuantity()}</span>
+      {totalQuantity === 0 ? <></> : <span className="qty-display">{totalQuantity}</span>}
     </button>
   );
 }
