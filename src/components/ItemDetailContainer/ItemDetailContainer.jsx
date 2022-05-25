@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { Waveform } from "@uiball/loaders";
-import { mockFetch } from "../../mockFetch";
+import { mockFetch } from "../../helpers/mockFetch";
 import "./ItemDetailContainer.css";
+import Loader from "../Loader/Loader";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
@@ -24,13 +24,7 @@ const ItemDetailContainer = () => {
 
   return (
     <section className="item-detail-container">
-      {loading ? (
-        <div className="loader">
-          <Waveform color="black" />
-        </div>
-      ) : (
-        <ItemDetail key={item.id} item={item} />
-      )}
+      {loading ? <Loader /> : <ItemDetail key={item.id} item={item} />}
     </section>
   );
 };

@@ -1,0 +1,9 @@
+@media only screen and (min-width: 768px) {
+    .CartItemList {
+        width: 65%;
+        padding-right: 1.5%;
+        overflow-y: scroll;
+        height: 72vh;
+        border-radius: 5px;
+    }
+}

@@ -1,8 +1,9 @@
 import "./Error404.css";
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../../helpers/useDocumentTitle";
 
 const Error404 = () => {
-  //TODO: cambiar todo a ingles
+  useDocumentTitle("Error 404 | García's Burgers");
   return (
     <div id="error404">
       <div className="screen1">
@@ -43,21 +44,21 @@ const Error404 = () => {
               </li>
             </ul>
           </div>
-          <div className="logoAnimacion">
+          <div className="logoAnimation">
             <img
               src="https://i.postimg.cc/YSMwz74y/animation3.png"
               alt="Logo animado 3"
-              id="logoAnimado3"
+              id="animatedLogo3"
             />
             <img
               src="https://i.postimg.cc/fRxNdyb9/animation2.png"
               alt="Logo animado 2"
-              id="logoAnimado2"
+              id="animatedLogo2"
             />
             <img
               src="https://i.postimg.cc/8z8GsMTG/animation1.png"
               alt="Logo animado 1"
-              id="logoAnimado1"
+              id="animatedLogo1"
             />
           </div>
         </section>

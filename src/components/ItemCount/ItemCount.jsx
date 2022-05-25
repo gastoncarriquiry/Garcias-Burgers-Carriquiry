@@ -1,16 +1,16 @@
 import { useState } from "react";
+import { IoAdd, IoRemove } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import "./ItemCount.css";
 
 const ProductAdded = () => {
-  //TODO: Fix Button width
   return (
     <div className="buttons">
-      <Link to="/menu">
-        <button className="btn">Pedir Más</button>
-      </Link>
       <Link to="/carrito">
         <button className="btn finish">Finalizar Pedido</button>
+      </Link>
+      <Link to="/menu">
+        <button className="btn">Pedir Más</button>
       </Link>
     </div>
   );
@@ -48,9 +48,13 @@ const ItemCount = ({ available, initial, onAdd }) => {
         state === "notDone" ? (
           <div className="counter">
             <div>
-              <button onClick={subtractProduct}>-</button>
+              <button onClick={subtractProduct}>
+                <IoRemove />
+              </button>
               <h2 id="qty">{quantity}</h2>
-              <button onClick={sumProduct}>+</button>
+              <button onClick={sumProduct}>
+                <IoAdd />
+              </button>
             </div>
             <button
               onClick={() => {
@@ -69,11 +73,12 @@ const ItemCount = ({ available, initial, onAdd }) => {
         <div className="counter disabled">
           <div className="disabled">
             <button onClick={subtractProduct} disabled>
-              -
+              <IoRemove />
+              <IoAdd />
             </button>
             <h2 id="qty">{quantity}</h2>
             <button onClick={sumProduct} disabled>
-              +
+              <IoAdd />
             </button>
           </div>
           <button className="btn disabled">Agregar al Carrito</button>

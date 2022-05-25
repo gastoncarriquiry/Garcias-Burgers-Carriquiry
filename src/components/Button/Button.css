@@ -7,7 +7,8 @@
   font-family: "Josefin Sans", sans-serif;
   cursor: pointer;
   transition: 0.3s;
-  width: 100%;
+  width: fit-content;
+  box-sizing: border-box;
   text-transform: uppercase;
   font-weight: bold;
 }

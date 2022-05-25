@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
-import { Waveform } from "@uiball/loaders";
-import { mockFetch } from "../../mockFetch";
-import { NavLink, useParams } from "react-router-dom";
+import { mockFetch } from "../..//helpers/mockFetch";
+import { useParams } from "react-router-dom";
 import SecondaryNavBar from "../SecondaryNavBar/SecondaryNavBar";
+import Loader from "../Loader/Loader";
+import useDocumentTitle from "../../helpers/useDocumentTitle";
 
 function ItemListContainer() {
+  useDocumentTitle("Menú | García's Burgers")
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  //TODO: loader not working
 
   const { category } = useParams();
 
@@ -33,15 +33,7 @@ function ItemListContainer() {
   return (
     <main>
       <SecondaryNavBar />
-      <section className="item-list">
-        {loading ? (
-          <div className="loader">
-            <Waveform color="black" />
-          </div>
-        ) : (
-          <ItemList items={items} />
-        )}
-      </section>
+      <section className="item-list">{loading ? <Loader /> : <ItemList items={items} />}</section>
     </main>
   );
 }

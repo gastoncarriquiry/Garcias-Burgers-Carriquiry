@@ -11,7 +11,7 @@ import Contact from "./layout/Contact/Contact";
 import { CartContextProvider } from "./context/CartContext";
 //TODO: HOME, ABOUT page, error404, contact form, Footer
 //TODO: Fixes CSS mobile
-
+//TODO: dynamic title --> context
 function App() {
   return (
     <BrowserRouter>

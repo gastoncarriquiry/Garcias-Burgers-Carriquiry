@@ -1,4 +1,4 @@
-import { itemList } from "./data/data";
+import { itemList } from "../data/data";
 
 export const mockFetch = (id) => {
   return new Promise((resolve, reject) => {

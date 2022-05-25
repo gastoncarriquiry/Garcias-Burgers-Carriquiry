@@ -1,0 +1,63 @@
+@media only screen and (min-width: 768px) {
+  .Cart {
+    margin-top: -1em;
+  }
+  .cart-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+  }
+
+  .emptyOrder {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3em;
+  }
+
+  .emptyOrder h2 {
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+  }
+
+  .suggestion {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 1em;
+    width: 20em;
+    margin: auto;
+    margin-top: 5em;
+    opacity: 0;
+    animation: suggestionAppear 1s forwards 1.5s;
+    margin-bottom: 3.5em;
+  }
+
+  .suggestion img {
+    width: 60%;
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .suggestion article div {
+    margin-bottom: 1em;
+  }
+
+  .suggestion > h3 {
+    color: var(--primary-color);
+  }
+}
+
+@keyframes suggestionAppear {
+  0% {
+    display: block;
+    opacity: 0;
+    transform: translateY(10em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
