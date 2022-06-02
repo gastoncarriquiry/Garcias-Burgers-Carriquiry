@@ -12,10 +12,15 @@ const OrderSummary = () => {
       <div className="summary-list">
         {cartList.map((item) => (
           <article key={item.id}>
-            <h3>{item.title}</h3>
-            <p>
-              <b>x{item.quantity}</b>
-            </p>
+            <div>
+              <h3>{item.title}</h3>
+              {item.extrasSelected !== undefined ? <p className="hasExtras">+ Extras</p> : <></>}
+            </div>
+            <div>
+              <p>
+                <b>x{item.quantity}</b>
+              </p>
+            </div>
           </article>
         ))}
       </div>

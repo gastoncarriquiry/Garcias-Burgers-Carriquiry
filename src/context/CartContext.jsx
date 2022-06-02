@@ -11,23 +11,34 @@ const CartContextProvider = (props) => {
   };
 
   const removeItem = (id) => {
-    const itemToRemove = cartList.filter((item) => item.id != id);
+    const itemToRemove = cartList.filter((item) => item.id !== id);
     setCartList(itemToRemove);
   };
 
   const clearCart = () => {
-    setCartList([]);
+    if (window.confirm("¿Seguro desea vaciar el carrito?")) {
+      setCartList([]);
+    }
   };
 
-  const totalPrice = (price, quantity) => {
-    return price * quantity;
+  const totalPrice = (price, quantity, extras) => {
+    if (extras) {
+      return price * quantity + extras;
+    } else {
+      return price * quantity;
+    }
   };
 
   const getTotal = () => {
     let subTotal = 0;
+    let itemPrice = 0;
     for (const item in cartList) {
-      let totalPrice = cartList[item].price * cartList[item].quantity;
-      subTotal += totalPrice;
+      if (cartList[item].extrasPrice !== undefined) {
+        itemPrice = cartList[item].price * cartList[item].quantity + cartList[item].extrasPrice;
+      } else {
+        itemPrice = cartList[item].price * cartList[item].quantity;
+      }
+      subTotal += itemPrice;
     }
     return subTotal;
   };

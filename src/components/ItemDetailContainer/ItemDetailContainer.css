@@ -6,6 +6,8 @@
 .item-detail-container {
   width: 90vw;
   margin: auto;
+  margin-bottom: 0.5em;
+  margin-top: -1.5em;
 }
 
 .loader {

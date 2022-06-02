@@ -34,7 +34,11 @@
 
   .item-extras {
     font-style: italic;
-    font-size: 0.9em;
+    font-size: 0.89em;
+  }
+
+  .extras-selected {
+    font-size: 0.6em;
   }
 
   .item-quantity {

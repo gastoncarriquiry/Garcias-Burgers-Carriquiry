@@ -6,9 +6,10 @@ import { useParams } from "react-router-dom";
 import SecondaryNavBar from "../SecondaryNavBar/SecondaryNavBar";
 import Loader from "../Loader/Loader";
 import useDocumentTitle from "../../helpers/useDocumentTitle";
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
 
 function ItemListContainer() {
-  useDocumentTitle("Menú | García's Burgers")
+  useDocumentTitle("Menú | García's Burgers");
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -17,18 +18,38 @@ function ItemListContainer() {
   useEffect(() => {
     setLoading(true);
 
+    const db = getFirestore();
+    const queryCollection = collection(db, "products");
+
     if (category) {
-      mockFetch()
-        .then((res) => setItems(res.filter((item) => item.category === category)))
-        .catch((err) => console.error(err))
+      const queryFilter = query(queryCollection, where("category", "==", `${category}`));
+      getDocs(queryFilter)
+        .then((res) => setItems(res.docs.map((item) => ({ id: item.id, ...item.data() }))))
+        .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     } else {
-      mockFetch()
-        .then((res) => setItems(res))
-        .catch((err) => console.error(err))
+      getDocs(queryCollection)
+        .then((res) => setItems(res.docs.map((item) => ({ id: item.id, ...item.data() }))))
+        .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
   }, [category]);
+
+  // useEffect(() => {
+  //   setLoading(true);
+
+  //   if (category) {
+  //     mockFetch()
+  //       .then((res) => setItems(res.filter((item) => item.category === category)))
+  //       .catch((err) => console.error(err))
+  //       .finally(() => setLoading(false));
+  //   } else {
+  //     mockFetch()
+  //       .then((res) => setItems(res))
+  //       .catch((err) => console.error(err))
+  //       .finally(() => setLoading(false));
+  //   }
+  // }, [category]);
 
   return (
     <main>
