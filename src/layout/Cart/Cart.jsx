@@ -16,7 +16,6 @@ const Cart = () => {
   };
 
   const suggestItem = () => {
-    const min = 0;
     const max = itemList.length - 1;
     let randomNumber = Math.floor(Math.random() * (max + 1));
     let suggestedItem = itemList[randomNumber];

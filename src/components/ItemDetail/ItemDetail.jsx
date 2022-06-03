@@ -132,7 +132,7 @@ const ItemDetail = ({ item }) => {
           </p>
         </div>
         <div className="chk-extras">
-          {/* {extras === undefined ? (
+          {extras === undefined ? (
             <></>
           ) : (
             extras.map(({ ref, text, price }, index) => (
@@ -150,7 +150,7 @@ const ItemDetail = ({ item }) => {
                 </label>
               </div>
             ))
-          )} */}
+          )}
         </div>
         <AddComment />
         {count === undefined ? (

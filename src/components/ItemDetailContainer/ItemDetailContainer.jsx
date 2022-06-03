@@ -14,25 +14,25 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
-  useEffect(() => {
-    setLoading(true);
-
-    const db = getFirestore();
-    const dbQuery = doc(db, "products", `${id}`);
-    getDoc(dbQuery)
-      .then((res) => setItem({ id: res.id, ...res.data() }))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
-  }, [id]);
-
   // useEffect(() => {
   //   setLoading(true);
 
-  //   mockFetch(id)
-  //     .then((res) => setItem(res))
+  //   const db = getFirestore();
+  //   const dbQuery = doc(db, "products", `${id}`);
+  //   getDoc(dbQuery)
+  //     .then((res) => setItem({ id: res.id, ...res.data() }))
   //     .catch((err) => console.log(err))
-  //     .finally(setLoading(false));
+  //     .finally(() => setLoading(false));
   // }, [id]);
+
+  useEffect(() => {
+    setLoading(true);
+
+    mockFetch(id)
+      .then((res) => setItem(res))
+      .catch((err) => console.log(err))
+      .finally(setLoading(false));
+  }, [id]);
 
   //TODO: preguntar porque muestra el loading poco tiempo y me devuelve un undefined y después carga completo
 

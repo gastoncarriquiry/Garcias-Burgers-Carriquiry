@@ -15,8 +15,14 @@ const CartContextProvider = (props) => {
     setCartList(itemToRemove);
   };
 
-  const clearCart = () => {
-    if (window.confirm("¿Seguro desea vaciar el carrito?")) {
+  const clearCart = (button) => {
+    if (button) {
+      if (window.confirm("¿Seguro desea vaciar el carrito?")) {
+        setCartList([]);
+      } else {
+        return;
+      }
+    } else {
       setCartList([]);
     }
   };

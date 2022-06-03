@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./OrderSummary.css";
 
-const OrderSummary = () => {
+const OrderSummary = ({ generateOrder }) => {
   const { cartList, clearCart, getTotal } = useCartContext();
   return (
     <div className="order-summary">
@@ -14,7 +14,7 @@ const OrderSummary = () => {
           <article key={item.id}>
             <div>
               <h3>{item.title}</h3>
-              {item.extrasSelected !== undefined ? <p className="hasExtras">+ Extras</p> : <></>}
+              {item.extrasSelected.length > 0 ? <p className="hasExtras">+ Extras</p> : <></>}
             </div>
             <div>
               <p>
@@ -28,10 +28,10 @@ const OrderSummary = () => {
         <p className="total">
           Subtotal: <b>${getTotal()}</b>
         </p>
-        <Link to="/pagos">
+        <Link to="/pago">
           <Button text="Pagar" />
         </Link>
-        <button title="Vaciar Carrito" className="btnClear" onClick={clearCart}>
+        <button title="Vaciar Carrito" className="btnClear" onClick={() => clearCart(true)}>
           <IoTrashOutline />
         </button>
       </div>
