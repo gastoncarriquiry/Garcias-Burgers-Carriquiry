@@ -8,7 +8,7 @@ const CartItemList = () => {
   return (
     <div className="CartItemList">
       {cartList.map((item) => (
-        <CartItem key={item.id} item={item} />
+        <CartItem key={Math.random()} item={item} />
       ))}
     </div>
   );

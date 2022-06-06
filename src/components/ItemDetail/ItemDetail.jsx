@@ -54,44 +54,54 @@ const ItemDetail = ({ item }) => {
     );
   };
 
+  const addProduct = (qty) => {
+    if (comment !== null) {
+      addToCart({
+        ...item,
+        quantity: qty,
+        extrasPrice: totalExtras,
+        extrasSelected: extrasSelected,
+        comment: comment,
+      });
+    } else {
+      addToCart({
+        ...item,
+        quantity: qty,
+        extrasPrice: totalExtras,
+        extrasSelected: extrasSelected,
+      });
+    }
+  };
+
   const onAdd = (qty) => {
-    //TODO: fix separar cuando son el mismo item y tiene extra
     setCount(qty);
-    // console.log(extrasSelected);
     let itemInCart = cartList.find((item) => item.id === id);
     if (itemInCart !== undefined) {
+      let itemIndex;
       for (const item in cartList) {
-        // console.log(extrasSelected);
-        // console.log(cartList[item].extrasSelected);
-        //TODO: pensar que otro criterio tengo que usar
-        if (cartList[item].id === id && cartList[item].extrasSelected === extrasSelected) {
-          if (cartList[item].quantity + qty > 50) {
-            cartList[item].quantity = 50;
-            alert(
-              "Solo puedes agregar hasta 50 unidades de un mismo producto. Si de verdad deseas más, contáctate con García's Burgers por teléfono."
-            );
-          } else {
-            cartList[item].quantity += qty;
-          }
+        if (
+          cartList[item].id === id &&
+          JSON.stringify(cartList[item].extrasSelected) === JSON.stringify(extrasSelected)
+        ) {
+          itemIndex = item;
         }
       }
-    } else {
-      if (comment !== null) {
-        addToCart({
-          ...item,
-          quantity: qty,
-          extrasPrice: totalExtras,
-          extrasSelected: extrasSelected,
-          comment: comment,
-        });
+      if (itemIndex !== undefined) {
+        console.log(itemIndex);
+        console.log(cartList[itemIndex], cartList[itemIndex].quantity);
+        if (cartList[itemIndex].quantity + qty > 50) {
+          cartList[itemIndex].quantity = 50;
+          alert(
+            "Solo puedes agregar hasta 50 unidades de un mismo producto. Si de verdad deseas más, contáctate con García's Burgers por teléfono."
+          );
+        } else {
+          cartList[itemIndex].quantity += qty;
+        }
       } else {
-        addToCart({
-          ...item,
-          quantity: qty,
-          extrasPrice: totalExtras,
-          extrasSelected: extrasSelected,
-        });
+        addProduct(qty);
       }
+    } else {
+      addProduct(qty);
     }
   };
 

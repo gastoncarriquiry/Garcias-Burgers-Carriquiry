@@ -1,14 +1,14 @@
 import "./Button.css";
 
-const Button = ({ click, text = "Button", disabled = false, classes }) => {
+const Button = ({ type = "button", click, text = "Button", disabled = false, classes = "" }) => {
   return (
     <>
       {disabled ? (
-        <button onClick={click} disabled className="btn">
+        <button disabled className="btn">
           {text}
         </button>
       ) : (
-        <button onClick={click} className={`btn ${classes}`}>
+        <button onClick={click} type={type} className={`btn ${classes}`}>
           {text}
         </button>
       )}

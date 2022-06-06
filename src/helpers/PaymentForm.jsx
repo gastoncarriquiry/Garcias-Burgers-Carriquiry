@@ -31,18 +31,17 @@ const PaymentForm = () => {
   });
   const [formValid, setFormValid] = useState(false);
   const delivery = useRef(null);
-  const [orderSent, setOrderSent] = useState(false);
 
-  const generateOrder = (evt) => {
-    evt.preventDefault();
-    evt.target.setAttribute("disabled", true);
-    setOrderSent(true);
+  const generateOrder = () => {
     let order = {};
+
+    //TODO: add address, takeaway/delivery
+
     order.buyer = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      address: `${form.address1} esq. ${form.address2}`,
+      name: "John Doe",
+      email: "johndoe123@email.com",
+      phone: "12345678",
+      address: "",
     };
     order.type = isDelivery ? "delivery" : "takeaway";
     order.total = getTotal();
@@ -99,22 +98,17 @@ const PaymentForm = () => {
   const handleChange = (evt) => {
     switch (evt.target.id) {
       case "inp_nombre":
-        if (isNaN(evt.key)) {
-          if (evt.target.value !== "") {
-            setForm({
-              ...form,
-              name: evt.target.value,
-              validInputs: { ...form.validInputs, name: true },
-              errors: { ...form.errors, name: "" },
-            });
-          } else {
-            setForm({
-              ...form,
-              name: evt.target.value,
-              validInputs: { ...form.validInputs, name: false },
-              errors: { ...form.errors, name: "Este campo no puede quedar vacío." },
-            });
-          }
+        if (
+          (evt.nativeEvent.data === " " || evt.nativeEvent.data) === null ||
+          isNaN(evt.nativeEvent.data) ||
+          evt.target.value !== ""
+        ) {
+          setForm({
+            ...form,
+            name: evt.target.value,
+            validInputs: { ...form.validInputs, name: true },
+            errors: { ...form.errors, name: "" },
+          });
         } else {
           setForm({
             ...form,
@@ -126,25 +120,13 @@ const PaymentForm = () => {
         break;
       case "inp_email":
         const regExpEmail = /[a-zA-Z0-9]+[.]?([a-zA-Z0-9]+)?[@][a-z]{3,9}[.][a-z]{2,5}/g;
-        if (evt.target.value !== "") {
-          if (regExpEmail.test(evt.target.value)) {
-            setForm({
-              ...form,
-              email: evt.target.value,
-              validInputs: { ...form.validInputs, email: true },
-              errors: { ...form.errors, email: "" },
-            });
-          } else {
-            setForm({
-              ...form,
-              email: evt.target.value,
-              validInputs: { ...form.validInputs, email: false },
-              errors: {
-                ...form.errors,
-                email: "El correo ingresado no es correcto. Ej: garciasburger@gmail.com",
-              },
-            });
-          }
+        if (regExpEmail.test(evt.target.value)) {
+          setForm({
+            ...form,
+            email: evt.target.value,
+            validInputs: { ...form.validInputs, email: true },
+            errors: { ...form.errors, email: "" },
+          });
         } else {
           setForm({
             ...form,
@@ -152,7 +134,7 @@ const PaymentForm = () => {
             validInputs: { ...form.validInputs, email: false },
             errors: {
               ...form.errors,
-              email: "Este campo no puede quedar vacío.",
+              email: "El correo ingresado no es correcto. Ej: garciasburger@gmail.com",
             },
           });
         }
@@ -160,27 +142,14 @@ const PaymentForm = () => {
       case "inp_phone":
         const regExpPhone =
           /^((09[1-9](\s?)([0-9]{3})(\s?)([0-9]{3}))|((2|4)(\s?)([0-9]{3})(\s?)([0-9]{2})(\s?)([0-9]{2})))$/g;
-        if (evt.target.value !== "") {
-          if (!isNaN(evt.key) || evt.key === undefined) {
-            if (regExpPhone.test(evt.target.value)) {
-              setForm({
-                ...form,
-                phone: evt.target.value,
-                validInputs: { ...form.validInputs, phone: true },
-                errors: { ...form.errors, phone: "" },
-              });
-            } else {
-              setForm({
-                ...form,
-                phone: evt.target.value,
-                validInputs: { ...form.validInputs, phone: false },
-                errors: {
-                  ...form.errors,
-                  phone:
-                    "Formato de teléfono inválido. Ejemplos de formatos aceptados: 098 075 725 (móvil) o 2603 4394 (fijo).",
-                },
-              });
-            }
+        if (evt.nativeEvent.data === null || !isNaN(evt.nativeEvent.data)) {
+          if (regExpPhone.test(evt.target.value)) {
+            setForm({
+              ...form,
+              phone: evt.target.value,
+              validInputs: { ...form.validInputs, phone: true },
+              errors: { ...form.errors, phone: "" },
+            });
           } else {
             setForm({
               ...form,
@@ -188,20 +157,11 @@ const PaymentForm = () => {
               validInputs: { ...form.validInputs, phone: false },
               errors: {
                 ...form.errors,
-                phone: "Asegúrese de ingresar números únicamente.",
+                phone:
+                  "Formato de teléfono inválido. Ejemplos de formatos aceptados: 098 075 725 (móvil) o 2603 4394 (fijo)",
               },
             });
           }
-        } else {
-          setForm({
-            ...form,
-            phone: evt.target.value,
-            validInputs: { ...form.validInputs, phone: false },
-            errors: {
-              ...form.errors,
-              phone: "Este campo no puede quedar vacío.",
-            },
-          });
         }
         break;
       case "inp_address1":
@@ -252,8 +212,8 @@ const PaymentForm = () => {
                 type="text"
                 id="inp_nombre"
                 placeholder="Nombre y Apellido"
-                defaultValue={form.name}
-                onKeyUp={handleChange}
+                value={form.name}
+                onChange={handleChange}
               />
               <p className="error">{form.errors.name}</p>
             </div>
@@ -263,8 +223,8 @@ const PaymentForm = () => {
                 type="email"
                 id="inp_email"
                 placeholder="ejemplo@correo.com"
-                defaultValue={form.email}
-                onKeyUp={handleChange}
+                value={form.email}
+                onChange={handleChange}
               />
               <p className="error">{form.errors.email}</p>
             </div>
@@ -274,8 +234,8 @@ const PaymentForm = () => {
                 type="tel"
                 id="inp_phone"
                 placeholder="Teléfono/Celular"
-                defaultValue={form.phone}
-                onKeyUp={handleChange}
+                value={form.phone}
+                onChange={handleChange}
                 onBlur={handleChange}
               />
               <p className="error">{form.errors.phone}</p>
@@ -290,8 +250,8 @@ const PaymentForm = () => {
                     type="text"
                     id="inp_address1"
                     placeholder="Mariano Uriarte 6300"
-                    defaultValue={form.address1}
-                    onKeyUp={handleChange}
+                    value={form.address1}
+                    onChange={handleChange}
                     onBlur={handleChange}
                   />
                 </div>
@@ -303,38 +263,29 @@ const PaymentForm = () => {
                     type="text"
                     id="inp_address2"
                     placeholder="Córcega"
-                    defaultValue={form.address2}
-                    onKeyUp={handleChange}
+                    value={form.address2}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
             ) : (
               <div>
                 <p>
-                  Nuestro local se encuentra en Mariano Uriarte 6300 esq. Córcega. Estamos abiertos:
+                  Nuestro local se encuentra en Mariano Uriarte 6300 esq. Córcega. Estamos abierto
+                  entre las 11:30 - 15:00 y 19:30 - 23:00 de lunes a jueves, entre las 11:30 - 15:00
+                  y 19:30 - 00:00 los viernes, entre las 19:30 - 00:00 los sábados y los domingos
+                  entre las 19:00 - 23:00.
                 </p>
-                <ul>
-                  <li>Lunes a jueves: 11:30 - 15:00 y 19:30 - 23:00</li>
-                  <li>Viernes: 11:30 - 15:00 y 19:30 - 00:00</li>
-                  <li>Sábado: 19:30 - 00:00</li>
-                  <li>Domingo: 19:00 - 23:00</li>
-                </ul>
               </div>
             )}
             <Button
               disabled={!formValid}
               type="submit"
+              click={generateOrder}
               text="Enviar Pedido"
-              click={(evt) => generateOrder(evt)}
             />
           </fieldset>
         </form>
-      ) : orderSent ? (
-        <div>
-          {/* TODO: this */}
-          El carrito está vacío pero se colocó una orden con éxito (mostrar ref de orden). Botón que
-          me mande al inicio y reinicie setOrder
-        </div>
       ) : (
         <div>
           <h1>No tenemos idea cómo llegaste hasta acá... ◐‿◑</h1>

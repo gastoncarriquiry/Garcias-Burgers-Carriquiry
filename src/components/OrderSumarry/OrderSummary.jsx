@@ -10,11 +10,20 @@ const OrderSummary = ({ generateOrder }) => {
     <div className="order-summary">
       <h1>Resumen de Pedido</h1>
       <div className="summary-list">
+        {/* TODO: <OrderItem /> */}
         {cartList.map((item) => (
-          <article key={item.id}>
+          <article key={Math.random()}>
             <div>
               <h3>{item.title}</h3>
-              {item.extrasSelected.length > 0 ? <p className="hasExtras">+ Extras</p> : <></>}
+              {item.extrasSelected !== undefined ? (
+                item.extrasSelected.length > 0 ? (
+                  <p className="hasExtras">+ Extras</p>
+                ) : (
+                  <></>
+                )
+              ) : (
+                <></>
+              )}
             </div>
             <div>
               <p>

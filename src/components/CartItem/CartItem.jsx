@@ -15,9 +15,9 @@ const CartItem = ({ item }) => {
     extrasPrice,
     extrasSelected = [],
   } = item;
-  console.log(extrasSelected);
+  // console.log(extrasSelected);
   return (
-    <article key={id} className="cart-item">
+    <article key={Math.random()} className="cart-item">
       <div className="product-info">
         <img src={picURL} alt={`Imagen de ${title}`} />
         <div>
@@ -25,7 +25,11 @@ const CartItem = ({ item }) => {
           <p className="item-category">{category}</p>
           <p className="item-extras">{additionals}</p>
           <p className="extras-selected">
-            {extrasSelected ? extrasSelected.map((extra) => <>| {extra.text} | </>) : <></>}
+            {extrasSelected ? (
+              extrasSelected.map((extra) => <i key={Math.random()}> {extra.text}. </i>)
+            ) : (
+              <fragment key="null"></fragment>
+            )}
           </p>
           <div className="item-quantity">
             <button onClick={() => subtractItem(quantity, id)}>

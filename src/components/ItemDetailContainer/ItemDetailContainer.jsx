@@ -34,8 +34,6 @@ const ItemDetailContainer = () => {
       .finally(setLoading(false));
   }, [id]);
 
-  //TODO: preguntar porque muestra el loading poco tiempo y me devuelve un undefined y después carga completo
-
   return (
     <section className="item-detail-container">
       {loading ? <Loader /> : <ItemDetail key={item.id} item={item} />}

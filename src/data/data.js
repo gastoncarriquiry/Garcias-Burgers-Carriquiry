@@ -1,6 +1,13 @@
+//Although this database has no use, its much more easier to edit.
+
 //TODO: CONSEGUIR TODAS LAS IMAGENES
 
-export const extrasList = [
+const extrasList = [
+  {
+    ref: "panQueso",
+    text: "Pan de queso",
+    price: 15,
+  },
   {
     ref: "burgerExtra",
     text: "Burger extra",
@@ -76,10 +83,15 @@ export const itemList = [
     description: "150 grs de carne, lechuga, tomate, jamón, muzzarella, bacon, mayonesa, ketchup.",
     additionals: "Guarnición de papas fritas incluida.",
     picURL: "https://i.postimg.cc/59PRc655/burger-Clasica.png",
-    price: 340,
+    price: 370,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -149,10 +161,15 @@ export const itemList = [
     description: "150 grs de carne, tomate seco, rúcula, muzzarella y mayonesa de rúcula.",
     picURL: "https://i.postimg.cc/L5hv43kt/burger-Italiana.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 365,
+    price: 395,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -223,10 +240,15 @@ export const itemList = [
       "150 grs de carne, lechuga, tomate, cebolla colorada, huevo duro, cheddar, pepinillos, ketchup.",
     picURL: "https://i.postimg.cc/XqhLrBxT/burger-Americana.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 440,
+    price: 480,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -296,10 +318,15 @@ export const itemList = [
     description: "150 grs de carne, cebolla colorada, queso emmental, morrón, mayonesa, tabasco.",
     picURL: "https://i.postimg.cc/TYgNKCM0/burger-Mexicana.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 440,
+    price: 480,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -369,10 +396,15 @@ export const itemList = [
     description: "150 grs de carne, tomate, cebolla caramelizada, crema roquefort, bacon crocante.",
     picURL: "https://i.postimg.cc/SKqrYh7N/burger-Roque.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
+    price: 520,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -442,10 +474,15 @@ export const itemList = [
     description: "250 grs de carne, queso emmental, queso cheddar, doble bacon, mayonesa.",
     picURL: "https://i.postimg.cc/vZxjtbVr/burger-Doble.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 485,
+    price: 510,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -516,10 +553,15 @@ export const itemList = [
       "300 grs de carne, cebolla, bacon, salsa barbacoa, queso muzzarella, queso cheddar, tomate.",
     picURL: "https://i.postimg.cc/c4b23rr1/burger-Garcias.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 510,
+    price: 550,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -589,10 +631,15 @@ export const itemList = [
     description: "Burger de garbanzo, tomate, queso de cabra, dátiles, mayonesa.",
     picURL: "https://i.postimg.cc/DZ011yWF/burger-Vegetariana.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 405,
+    price: 450,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -662,10 +709,15 @@ export const itemList = [
     description: "Burger de garbanzo, lechuga, tomate, cebolla, repollo colorado, mostaza.",
     picURL: "https://i.postimg.cc/xTDtVMJz/burger-Veggie.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 405,
+    price: 450,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -735,10 +787,15 @@ export const itemList = [
     description: "100 grs de carne, queso cheddar, ketchup.",
     picURL: "https://i.postimg.cc/8CHbh0td/burger-Infantil.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 220,
+    price: 240,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -809,10 +866,15 @@ export const itemList = [
       "150 grs de carne, queso cheddar, cebolla caramelizada, bacon, huevo frito, salsa barbacoa.",
     picURL: "https://i.postimg.cc/qMhQ9Qv0/burger-Caramelizada.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 400,
+    price: 440,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -882,10 +944,15 @@ export const itemList = [
     description: "280 grs de carne en 4 burgers, queso cheddar (x4), ketchup.",
     picURL: "https://i.postimg.cc/PqtWrMTC/burger-Somerset.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
+    price: 525,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -955,10 +1022,15 @@ export const itemList = [
     description: "150 grs de carne, queso cheddar, panceta, huevo frito y mayonesa.",
     picURL: "https://picsum.photos/200",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 330,
+    price: 350,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -1028,10 +1100,15 @@ export const itemList = [
     description: "150 grs de carne, guacamole, lechuga, tomate, queso emmental, mayonesa.",
     picURL: "https://picsum.photos/200",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 475,
+    price: 500,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -1101,10 +1178,15 @@ export const itemList = [
     description: "150 grs de carne, queso cheddar, panceta, salsa barbacoa y 3 aros de cebolla.",
     picURL: "https://picsum.photos/200",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 375,
+    price: 400,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -1174,10 +1256,250 @@ export const itemList = [
     description: "300 grs de carne, queso cheddar x3, panceta x3 y huevo frito.",
     picURL: "https://picsum.photos/200",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 505,
+    price: 555,
     available: true,
     initial: 1,
     extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
+      {
+        ref: "burgerExtra",
+        text: "Burger extra",
+        price: 125,
+      },
+      {
+        ref: "huevoFrito",
+        text: "Huevo frito",
+        price: 30,
+      },
+      {
+        ref: "extraPanceta",
+        text: "Extra panceta",
+        price: 55,
+      },
+      {
+        ref: "cheddarPancetaGuarnicion",
+        text: "Cheddar y panceta en guarnición",
+        price: 100,
+      },
+      {
+        ref: "extraCheddar",
+        text: "Cheddar extra",
+        price: 55,
+      },
+      {
+        ref: "cambioXRusticas",
+        text: "Cambio por rústicas en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cambioXAros",
+        text: "Cambio por aros de cebolla en guarnición",
+        price: 50,
+      },
+      {
+        ref: "bañoCheddar",
+        text: "Baño de cheddar",
+        price: 45,
+      },
+      {
+        ref: "tomate",
+        text: "Tomate",
+        price: 25,
+      },
+      {
+        ref: "lechuga",
+        text: "Lechuga",
+        price: 25,
+      },
+      {
+        ref: "pepinillos",
+        text: "Pepinillos",
+        price: 40,
+      },
+      {
+        ref: "cremaChampiGuarnicion",
+        text: "Crema champi en guarnición",
+        price: 65,
+      },
+    ],
+  },
+  {
+    id: "bigCheese",
+    title: "Big Cheese",
+    category: "hamburguesas",
+    description: "150 grs de carne, queso cheddar, bastones de muzzarella y queso provolone.",
+    picURL: "https://picsum.photos/200",
+    additionals: "Guarnición de papas fritas incluida.",
+    price: 390,
+    available: true,
+    initial: 1,
+    extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
+      {
+        ref: "burgerExtra",
+        text: "Burger extra",
+        price: 125,
+      },
+      {
+        ref: "huevoFrito",
+        text: "Huevo frito",
+        price: 30,
+      },
+      {
+        ref: "extraPanceta",
+        text: "Extra panceta",
+        price: 55,
+      },
+      {
+        ref: "cheddarPancetaGuarnicion",
+        text: "Cheddar y panceta en guarnición",
+        price: 100,
+      },
+      {
+        ref: "extraCheddar",
+        text: "Cheddar extra",
+        price: 55,
+      },
+      {
+        ref: "cambioXRusticas",
+        text: "Cambio por rústicas en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cambioXAros",
+        text: "Cambio por aros de cebolla en guarnición",
+        price: 50,
+      },
+      {
+        ref: "bañoCheddar",
+        text: "Baño de cheddar",
+        price: 45,
+      },
+      {
+        ref: "tomate",
+        text: "Tomate",
+        price: 25,
+      },
+      {
+        ref: "lechuga",
+        text: "Lechuga",
+        price: 25,
+      },
+      {
+        ref: "pepinillos",
+        text: "Pepinillos",
+        price: 40,
+      },
+      {
+        ref: "cremaChampiGuarnicion",
+        text: "Crema champi en guarnición",
+        price: 65,
+      },
+    ],
+  },
+  {
+    id: "burgerMundial",
+    title: "Burger Mundial",
+    category: "hamburguesas",
+    description:
+      "200 grs de carne en 2 burgers, salsa especial, lechuga, pepinillos, cebolla y queso cheddar x2.",
+    picURL: "https://picsum.photos/200",
+    additionals: "Guarnición de papas fritas incluida.",
+    price: 310,
+    available: true,
+    initial: 1,
+    extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
+      {
+        ref: "burgerExtra",
+        text: "Burger extra",
+        price: 125,
+      },
+      {
+        ref: "huevoFrito",
+        text: "Huevo frito",
+        price: 30,
+      },
+      {
+        ref: "extraPanceta",
+        text: "Extra panceta",
+        price: 55,
+      },
+      {
+        ref: "cheddarPancetaGuarnicion",
+        text: "Cheddar y panceta en guarnición",
+        price: 100,
+      },
+      {
+        ref: "extraCheddar",
+        text: "Cheddar extra",
+        price: 55,
+      },
+      {
+        ref: "cambioXRusticas",
+        text: "Cambio por rústicas en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cambioXAros",
+        text: "Cambio por aros de cebolla en guarnición",
+        price: 50,
+      },
+      {
+        ref: "bañoCheddar",
+        text: "Baño de cheddar",
+        price: 45,
+      },
+      {
+        ref: "tomate",
+        text: "Tomate",
+        price: 25,
+      },
+      {
+        ref: "lechuga",
+        text: "Lechuga",
+        price: 25,
+      },
+      {
+        ref: "pepinillos",
+        text: "Pepinillos",
+        price: 40,
+      },
+      {
+        ref: "cremaChampiGuarnicion",
+        text: "Crema champi en guarnición",
+        price: 65,
+      },
+    ],
+  },
+  {
+    id: "pulledPorkBurger",
+    title: "Pulled Pork burger",
+    category: "hamburguesas",
+    description: "Cerdo desmechado a la cerveza y barbacoa, queso cheddar y tomate.",
+    picURL: "https://picsum.photos/200",
+    additionals: "Guarnición de papas fritas incluida.",
+    price: 400,
+    available: true,
+    initial: 1,
+    extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
       {
         ref: "burgerExtra",
         text: "Burger extra",
@@ -1499,10 +1821,10 @@ export const itemList = [
     id: "sola",
     title: "Milanesa Sola",
     category: "milanesas",
-    description: "",
+    description: "Milanesa de carne",
     picURL: "https://i.postimg.cc/W4HwWkct/milanesa.png",
     additionals: "",
-    price: 250,
+    price: 270,
     available: true,
     initial: 1,
     extras: [
@@ -1532,10 +1854,10 @@ export const itemList = [
     id: "conPapasFritas",
     title: "Milanesa con Papas Fritas",
     category: "milanesas",
-    description: "Milanesa con guarnición de papas fritas.",
+    description: "Milanesa de carne con guarnición de papas fritas.",
     picURL: "https://i.postimg.cc/W4HwWkct/milanesa.png",
     additionals: "",
-    price: 350,
+    price: 370,
     available: true,
     initial: 1,
     extras: [
@@ -1586,10 +1908,10 @@ export const itemList = [
     title: "Milanesa en Dos Panes",
     category: "milanesas",
     description:
-      "Milanesa en dos panes con lechuga, tomate, morrón, 2 huevos fritos, jamón, queso muzzarella y panceta crocante.",
+      "Milanesa de carne en dos panes con lechuga, tomate, morrón, 2 huevos fritos, jamón, queso muzzarella y panceta crocante.",
     picURL: "https://i.postimg.cc/2y4dS9bB/milanesa2-Panes.png",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 540,
+    price: 600,
     available: true,
     initial: 1,
     extras: [
@@ -1639,10 +1961,10 @@ export const itemList = [
     id: "napolitana",
     title: "Milanesa Napolitana",
     category: "milanesas",
-    description: "Milanesa napolitana (con salsa de tomate y queso muzzarella).",
+    description: "Milanesa de carne a la napolitana (con salsa de tomate y queso muzzarella).",
     picURL: "https://i.postimg.cc/DfsP60jy/milanesa-Napolitana.png",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 520,
     available: true,
     initial: 1,
     extras: [
@@ -1692,11 +2014,11 @@ export const itemList = [
     id: "cheddar",
     title: "Milanesa con Cheddar",
     category: "milanesas",
-    description: "Milanesa con queso cheddar, panceta y 2 huevos fritos encima.",
+    description: "Milanesa de carne con queso cheddar, panceta y 2 huevos fritos encima.",
     picURL: "https://i.postimg.cc/q7RGxGY9/milanesa-Cheddar-Panceta-Huevos.png",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 510,
-    available: true,
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 560,
+    available: false,
     initial: 1,
     extras: [
       {
@@ -1745,10 +2067,10 @@ export const itemList = [
     id: "champi",
     title: "Milanesa Champi",
     category: "milanesas",
-    description: "Milanesa con Crema de Champiñones.",
+    description: "Milanesa de carne bañada con crema de champiñones.",
     picURL: "https://i.postimg.cc/VLq4fvnH/milanesa-Champi.png",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 510,
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 560,
     available: true,
     initial: 1,
     extras: [
@@ -1798,10 +2120,10 @@ export const itemList = [
     id: "milanesaRucula",
     title: "Milanesa con Rúcula",
     category: "milanesas",
-    description: "Milanesa con queso muzzarella y rúcula.",
+    description: "Milanesa de carne con queso muzzarella y rúcula.",
     picURL: "https://i.postimg.cc/L8vTPWyt/milanesa-Rucula.png",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 520,
     available: true,
     initial: 1,
     extras: [
@@ -1851,10 +2173,10 @@ export const itemList = [
     id: "cebollaCaramelizada",
     title: "Milanesa con Cebolla Caramelizada",
     category: "milanesas",
-    description: "Milanesa con queso muzzarella y cebolla caramelizada.",
+    description: "Milanesa de carne con queso muzzarella y cebolla caramelizada.",
     picURL: "https://i.postimg.cc/zDR0Q0BN/milanesa-Caramelizada.png",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 520,
     available: true,
     initial: 1,
     extras: [
@@ -1904,11 +2226,11 @@ export const itemList = [
     id: "morronCebolla",
     title: "Milanesa con Morrón y Cebolla",
     category: "milanesas",
-    description: "Milanesa con queso muzzarella, morrón, cebolla colorada y tabasco.",
+    description: "Milanesa de carne con queso muzzarella, morrón, cebolla colorada y tabasco.",
     picURL: "https://picsum.photos/200",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
-    available: true,
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 520,
+    available: false,
     initial: 1,
     extras: [
       {
@@ -1957,10 +2279,117 @@ export const itemList = [
     id: "capresse",
     title: "Milanesa Capresse",
     category: "milanesas",
-    description: "Milanesa con queso muzzarella, tomate y albahaca.",
+    description: "Milanesa de carne con queso muzzarella, tomate y albahaca.",
     picURL: "https://picsum.photos/200",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 520,
+    available: true,
+    initial: 1,
+    extras: [
+      {
+        ref: "huevoFrito",
+        text: "Huevo frito",
+        price: 30,
+      },
+      {
+        ref: "bañoCheddar",
+        text: "Baño de cheddar",
+        price: 45,
+      },
+      {
+        ref: "tomate",
+        text: "Tomate",
+        price: 25,
+      },
+      {
+        ref: "lechuga",
+        text: "Lechuga",
+        price: 25,
+      },
+      {
+        ref: "cambioXRusticas",
+        text: "Cambio por rústicas en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cambioXAros",
+        text: "Cambio por aros de cebolla en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cheddarPancetaGuarnicion",
+        text: "Cheddar y panceta en guarnición",
+        price: 100,
+      },
+      {
+        ref: "cremaChampiGuarnicion",
+        text: "Crema champi en guarnición",
+        price: 65,
+      },
+    ],
+  },
+  {
+    id: "milanesaMexicana",
+    title: "Milanesa Mexicana",
+    category: "milanesas",
+    description:
+      "Milanesa de carne con queso muzzarella, morrón, cebolla colorada y salsa tabasco.",
+    picURL: "https://picsum.photos/200",
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 520,
+    available: true,
+    initial: 1,
+    extras: [
+      {
+        ref: "huevoFrito",
+        text: "Huevo frito",
+        price: 30,
+      },
+      {
+        ref: "bañoCheddar",
+        text: "Baño de cheddar",
+        price: 45,
+      },
+      {
+        ref: "tomate",
+        text: "Tomate",
+        price: 25,
+      },
+      {
+        ref: "lechuga",
+        text: "Lechuga",
+        price: 25,
+      },
+      {
+        ref: "cambioXRusticas",
+        text: "Cambio por rústicas en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cambioXAros",
+        text: "Cambio por aros de cebolla en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cheddarPancetaGuarnicion",
+        text: "Cheddar y panceta en guarnición",
+        price: 100,
+      },
+      {
+        ref: "cremaChampiGuarnicion",
+        text: "Crema champi en guarnición",
+        price: 65,
+      },
+    ],
+  },
+  {
+    id: "rellena",
+    title: "Milanesa Rellena",
+    category: "milanesas",
+    description: "Milanesa rellena con queso muzzarella, morrón, panceta crocante y rúcula.",
+    picURL: "https://picsum.photos/200",
+    additionals: "Guarnición de papas fritas o ensalada mixta incluida.",
+    price: 720,
     available: true,
     initial: 1,
     extras: [

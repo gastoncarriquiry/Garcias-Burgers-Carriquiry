@@ -40,12 +40,14 @@ function ItemListContainer() {
 
     if (category) {
       mockFetch()
-        .then((res) => setItems(res.filter((item) => item.category === category)))
+        .then((res) =>
+          setItems(res.filter((item) => item.category === category && item.available === true))
+        )
         .catch((err) => console.error(err))
         .finally(() => setLoading(false));
     } else {
       mockFetch()
-        .then((res) => setItems(res))
+        .then((res) => setItems(res.filter((item) => item.available === true)))
         .catch((err) => console.error(err))
         .finally(() => setLoading(false));
     }
