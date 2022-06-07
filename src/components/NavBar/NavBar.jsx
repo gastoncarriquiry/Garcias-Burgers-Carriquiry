@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import BrandLogo from "../BrandLogo/BrandLogo";
-
+//TODO: fix logo
 function NavBar() {
   //ONSCROLL SHRINK HEADER
   const mediaQuery = window.matchMedia("(min-width: 768px)");

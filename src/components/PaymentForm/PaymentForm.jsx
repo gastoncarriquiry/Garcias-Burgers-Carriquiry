@@ -4,6 +4,9 @@ import Button from "../Button/Button";
 import useDocumentTitle from "../../helpers/useDocumentTitle";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import FormInput from "../FormInput/FormInput";
 
 const PaymentForm = () => {
   useDocumentTitle("Pago | García's Burgers");
@@ -16,6 +19,7 @@ const PaymentForm = () => {
     phone: "",
     address1: "",
     address2: "",
+    comment: "",
     validInputs: {
       name: false,
       email: false,
@@ -32,9 +36,12 @@ const PaymentForm = () => {
   const [formValid, setFormValid] = useState(false);
   const delivery = useRef(null);
   const [orderSent, setOrderSent] = useState(false);
+  const [orderRef, setOrderRef] = useState(undefined);
+  const [loading, setLoading] = useState(false);
 
   const generateOrder = (evt) => {
     evt.preventDefault();
+    setLoading(true);
     evt.target.setAttribute("disabled", true);
     setOrderSent(true);
     let order = {};
@@ -42,8 +49,13 @@ const PaymentForm = () => {
       name: form.name,
       email: form.email,
       phone: form.phone,
-      address: `${form.address1} esq. ${form.address2}`,
+      address: isDelivery
+        ? form.address2 !== ""
+          ? `${form.address1} esq. ${form.address2}`
+          : form.address1
+        : "S/D - takeaway",
     };
+    order.comment = form.comment;
     order.type = isDelivery ? "delivery" : "takeaway";
     order.total = getTotal();
     order.date = new Date();
@@ -71,9 +83,12 @@ const PaymentForm = () => {
     const db = getFirestore();
     const queryCollection = collection(db, "orders");
     addDoc(queryCollection, order)
-      .then((res) => console.log(res))
+      .then((res) => setOrderRef(res.id))
       .catch((err) => console.error(err))
-      .finally(() => clearCart());
+      .finally(() => {
+        clearCart();
+        setLoading(false);
+      });
   };
 
   useEffect(() => setLastEvent(delivery.current), []);
@@ -206,12 +221,21 @@ const PaymentForm = () => {
         break;
       case "inp_address1":
         if (evt.target.value !== "") {
-          setForm({
-            ...form,
-            address1: evt.target.value,
-            validInputs: { ...form.validInputs, address1: true },
-            errors: { ...form.errors, address1: "" },
-          });
+          if (/\d/.test(evt.target.value)) {
+            setForm({
+              ...form,
+              address1: evt.target.value,
+              validInputs: { ...form.validInputs, address1: true },
+              errors: { ...form.errors, address1: "" },
+            });
+          } else {
+            setForm({
+              ...form,
+              address1: evt.target.value,
+              validInputs: { ...form.validInputs, address1: false },
+              errors: { ...form.errors, address1: "Por favor incluya el número de puerta." },
+            });
+          }
         } else {
           setForm({
             ...form,
@@ -223,6 +247,9 @@ const PaymentForm = () => {
         break;
       case "inp_address2":
         setForm({ ...form, address2: evt.target.value });
+        break;
+      case "inp_comment":
+        setForm({ ...form, comment: evt.target.value });
         break;
       default:
         break;
@@ -246,67 +273,60 @@ const PaymentForm = () => {
             <button onClick={handleOnClick}>Takeaway/Para llevar</button>
           </div>
           <fieldset>
-            <div>
-              <label htmlFor="inp_nombre">Nombre</label>
-              <input
-                type="text"
-                id="inp_nombre"
-                placeholder="Nombre y Apellido"
-                defaultValue={form.name}
-                onKeyUp={handleChange}
-              />
-              <p className="error">{form.errors.name}</p>
-            </div>
-            <div>
-              <label htmlFor="inp_email">Correo Electrónico</label>
-              <input
-                type="email"
-                id="inp_email"
-                placeholder="ejemplo@correo.com"
-                defaultValue={form.email}
-                onKeyUp={handleChange}
-              />
-              <p className="error">{form.errors.email}</p>
-            </div>
-            <div>
-              <label htmlFor="inp_phone">Teléfono/Celular</label>
-              <input
-                type="tel"
-                id="inp_phone"
-                placeholder="Teléfono/Celular"
-                defaultValue={form.phone}
-                onKeyUp={handleChange}
-                onBlur={handleChange}
-              />
-              <p className="error">{form.errors.phone}</p>
-            </div>
+            <FormInput
+              type="text"
+              id="inp_nombre"
+              placeholder="Nombre y Apellido"
+              value={form.name}
+              onAction={handleChange}
+              errorText={form.errors.name}
+              labelText="Nombre Completo"
+            />
+            <FormInput
+              type="email"
+              id="inp_email"
+              placeholder="ejemplo@correo.com"
+              value={form.email}
+              onAction={handleChange}
+              errorText={form.errors.email}
+              labelText="Correo Electrónico"
+            />
+            <FormInput
+              type="tel"
+              id="inp_phone"
+              placeholder="Ej.: 098 075 725 o 2603 4394"
+              value={form.phone}
+              onAction={handleChange}
+              errorText={form.errors.phone}
+              labelText="Teléfono/Celular"
+            />
             {isDelivery ? (
               <div>
-                <div>
-                  <label htmlFor="inp_address1">
-                    Dirección <small>(calle y número de puerta)</small>
-                  </label>
-                  <input
-                    type="text"
-                    id="inp_address1"
-                    placeholder="Mariano Uriarte 6300"
-                    defaultValue={form.address1}
-                    onKeyUp={handleChange}
-                    onBlur={handleChange}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="inp_address2">
-                    Esquina <small>(opcional)</small>
-                  </label>
-                  <input
-                    type="text"
-                    id="inp_address2"
-                    placeholder="Córcega"
-                    defaultValue={form.address2}
-                    onKeyUp={handleChange}
-                  />
-                </div>
+                <FormInput
+                  type="text"
+                  id="inp_address1"
+                  placeholder="Ej.: Mariano Uriarte 6300"
+                  value={form.address1}
+                  onAction={handleChange}
+                  errorText={form.errors.address1}
+                  labelText="Dirección"
+                />
+                <FormInput
+                  type="text"
+                  id="inp_address2"
+                  placeholder="Ej.: Córcega"
+                  value={form.address2}
+                  onAction={handleChange}
+                  labelText="Esquina (esq.)"
+                />
+                <FormInput
+                  type="textarea"
+                  id="inp_comment"
+                  placeholder="Comentarios o aclaraciones"
+                  value={form.comment}
+                  onAction={handleChange}
+                  labelText="Comentarios sobre la entrega"
+                />
               </div>
             ) : (
               <div>
@@ -327,13 +347,17 @@ const PaymentForm = () => {
               text="Enviar Pedido"
               click={(evt) => generateOrder(evt)}
             />
+            {loading ? <Loader /> : <></>}
           </fieldset>
         </form>
       ) : orderSent ? (
         <div>
-          {/* TODO: this */}
-          El carrito está vacío pero se colocó una orden con éxito (mostrar ref de orden). Botón que
-          me mande al inicio y reinicie setOrder
+          <h2>¡PEDIDO EXITOSO!</h2>
+          <IoCheckmarkCircleOutline />
+          <p>El código de referencia de su pedido es: {orderRef}</p>
+          <Link to="/">
+            <Button text="Volver al Inicio" click={() => setOrderSent(false)} />
+          </Link>
         </div>
       ) : (
         <div>

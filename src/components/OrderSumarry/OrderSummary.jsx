@@ -3,6 +3,7 @@ import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./OrderSummary.css";
+import OrderItem from "../OrderItem/OrderItem";
 
 const OrderSummary = ({ generateOrder }) => {
   const { cartList, clearCart, getTotal } = useCartContext();
@@ -10,27 +11,8 @@ const OrderSummary = ({ generateOrder }) => {
     <div className="order-summary">
       <h1>Resumen de Pedido</h1>
       <div className="summary-list">
-        {/* TODO: <OrderItem /> */}
         {cartList.map((item) => (
-          <article key={Math.random()}>
-            <div>
-              <h3>{item.title}</h3>
-              {item.extrasSelected !== undefined ? (
-                item.extrasSelected.length > 0 ? (
-                  <p className="hasExtras">+ Extras</p>
-                ) : (
-                  <></>
-                )
-              ) : (
-                <></>
-              )}
-            </div>
-            <div>
-              <p>
-                <b>x{item.quantity}</b>
-              </p>
-            </div>
-          </article>
+          <OrderItem item={item} key={Math.random()} />
         ))}
       </div>
       <div className="buttons">
