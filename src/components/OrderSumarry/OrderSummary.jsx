@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import "./OrderSummary.css";
 import OrderItem from "../OrderItem/OrderItem";
 
-const OrderSummary = ({ generateOrder }) => {
+const OrderSummary = () => {
   const { cartList, clearCart, getTotal } = useCartContext();
   return (
     <div className="order-summary">

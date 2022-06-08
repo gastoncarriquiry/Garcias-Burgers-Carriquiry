@@ -1,5 +1,3 @@
-import React from "react";
-
 const OrderItem = ({ item }) => {
   return (
     <article key={Math.random()}>

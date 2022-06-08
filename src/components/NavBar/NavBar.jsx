@@ -7,7 +7,7 @@ import BrandLogo from "../BrandLogo/BrandLogo";
 
 function NavBar() {
   const navBar = useRef(null);
-  //ONSCROLL SHRINK HEADER
+  //shrink header onscroll
   const mediaQuery = window.matchMedia("(min-width: 768px)");
   window.onscroll = function () {
     if (mediaQuery.matches) {

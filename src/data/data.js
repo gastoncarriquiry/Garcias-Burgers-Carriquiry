@@ -2,7 +2,7 @@
 
 //TODO: CONSEGUIR TODAS LAS IMAGENES
 
-const extrasList = [
+/* const extrasList = [
   {
     ref: "panQueso",
     text: "Pan de queso",
@@ -73,7 +73,7 @@ const extrasList = [
     text: "Crema champi en guarnición",
     price: 65,
   },
-];
+];*/
 
 export const itemList = [
   {

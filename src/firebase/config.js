@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
+  // apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   apiKey: "AIzaSyB6AgxZTQUNIY9e9XfwuU-PQvLsQChBc9I",
   authDomain: "garciasburgerecommerce.firebaseapp.com",
   projectId: "garciasburgerecommerce",

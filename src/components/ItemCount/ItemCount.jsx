@@ -26,7 +26,6 @@ const ItemCount = ({ available, initial, onAdd }) => {
 
   const sumProduct = () => {
     if (quantity <= 49) {
-      // USO CANTIDAD LIMITADA POR 50 PORQUE HABLAMOS DE COMIDA Y NO TIENE STOCK PORQUE SE PREPARAN EN EL MOMENTO
       setQuantity(quantity + 1);
       if (quantity === 50) {
         console.log("No puede seleccionar más productos.");

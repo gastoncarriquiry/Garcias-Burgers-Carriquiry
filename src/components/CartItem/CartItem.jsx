@@ -15,7 +15,6 @@ const CartItem = ({ item }) => {
     extrasPrice,
     extrasSelected = [],
   } = item;
-  // console.log(extrasSelected);
   return (
     <article key={Math.random()} className="cart-item">
       <div className="product-info">
