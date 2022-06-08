@@ -1,37 +1,27 @@
 import "./NavBar.css";
+import { useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import BrandLogo from "../BrandLogo/BrandLogo";
-//TODO: fix logo
+
 function NavBar() {
+  const navBar = useRef(null);
   //ONSCROLL SHRINK HEADER
   const mediaQuery = window.matchMedia("(min-width: 768px)");
   window.onscroll = function () {
     if (mediaQuery.matches) {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.querySelector(".Brand-Logo").style.minWidth = "4%";
-        document.querySelector(".Brand-Logo").style.height = "60px";
-        document.querySelector(".container").style.paddingBottom = "0.5em";
-        document.querySelector(".NavBar").style.height = "3em";
-        document.querySelector(".NavBar").style.backgroundColor = "rgba(0, 0, 0, 0.87)";
+        navBar.current.classList.add("smaller");
       } else {
-        document.querySelector(".Brand-Logo").style.minWidth = "6%";
-        document.querySelector(".Brand-Logo").style.height = "92px";
-        document.querySelector(".container").style.paddingBottom = "0.5em";
-        document.querySelector(".NavBar").style.height = "5em";
-        document.querySelector(".NavBar").style.backgroundColor = "black";
+        navBar.current.classList.remove("smaller");
       }
     } else {
-      document.querySelector(".Brand-Logo").style.minWidth = "15%";
-      document.querySelector(".Brand-Logo").style.height = "65px";
-      document.querySelector(".container").style.paddingBottom = "0.5em";
-      document.querySelector(".NavBar").style.height = "5em";
-      document.querySelector(".NavBar").style.backgroundColor = "black";
+      navBar.current.classList.add("mobile");
     }
   };
   return (
-    <header className="NavBar">
+    <header className="NavBar" ref={navBar}>
       <div className="container">
         <Link to="/" className="Brand-Logo">
           <BrandLogo />
@@ -42,7 +32,7 @@ function NavBar() {
             <NavLink to="/">
               <button>INICIO</button>
             </NavLink>
-            <NavLink to="/menu">
+            <NavLink to="/menu/hamburguesas">
               <button>MENÚ</button>
             </NavLink>
             <NavLink to="/nosotros">

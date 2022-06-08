@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { mockFetch } from "../../helpers/mockFetch";
 import "./ItemDetailContainer.css";
 import useDocumentTitle from "../../helpers/useDocumentTitle";
 import Loader from "../Loader/Loader";
@@ -14,24 +13,15 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
-  // useEffect(() => {
-  //   setLoading(true);
-
-  //   const db = getFirestore();
-  //   const dbQuery = doc(db, "products", `${id}`);
-  //   getDoc(dbQuery)
-  //     .then((res) => setItem({ id: res.id, ...res.data() }))
-  //     .catch((err) => console.log(err))
-  //     .finally(() => setLoading(false));
-  // }, [id]);
-
   useEffect(() => {
     setLoading(true);
 
-    mockFetch(id)
-      .then((res) => setItem(res))
+    const db = getFirestore();
+    const dbQuery = doc(db, "products", `${id}`);
+    getDoc(dbQuery)
+      .then((res) => setItem({ id: res.id, ...res.data() }))
       .catch((err) => console.log(err))
-      .finally(setLoading(false));
+      .finally(() => setLoading(false));
   }, [id]);
 
   return (

@@ -26,6 +26,19 @@ body {
   transition: 0.3s;
 }
 
+.NavBar.mobile {
+  height: 5em;
+  background-color: black;
+}
+
+.NavBar.mobile .Brand-Logo {
+  min-width: 15%;
+}
+
+.NavBar.mobile .container {
+  padding-bottom: 0.5em;
+}
+
 .container {
   width: 85%;
   height: inherit;
@@ -41,14 +54,13 @@ body {
 }
 
 .Brand-Logo {
-  min-width: 15%;
+  width: 15%;
   text-align: center;
-  height: 68px;
   transition: 0.3s;
 }
 
 .Nav-Logo {
-  width: 100% !important;
+  width: 100%;
   transition: 0.3s;
 }
 
@@ -117,9 +129,32 @@ body {
     margin-right: 0;
   }
 
+  .container {
+    padding-bottom: 0.5em;
+    width: 75%;
+  }
+
+  .NavBar {
+    padding-top: 1.5em;
+    background-color: black;
+    height: 5em;
+  }
+
   .Brand-Logo {
-    min-width: 6%;
-    height: 82px;
+    width: 5%;
+    padding: 0.3em 1em;
+    margin-bottom: 0;
+  }
+
+  .NavBar.smaller {
+    height: 3em;
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+
+  .NavBar.smaller .Brand-Logo {
+    width: 4%;
+    padding: 0.1em 0.5em;
+    margin-bottom: -0.2em;
   }
 
   .links {
@@ -148,15 +183,6 @@ body {
   .menu button.hamburger {
     display: none;
     order: 3;
-  }
-
-  .container {
-    padding-bottom: 1.2em;
-    width: 75%;
-  }
-
-  .NavBar {
-    padding-top: 1.5em;
   }
 
   .links .active button {

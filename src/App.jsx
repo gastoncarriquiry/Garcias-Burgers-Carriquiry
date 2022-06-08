@@ -12,6 +12,7 @@ import { CartContextProvider } from "./context/CartContext";
 import PaymentForm from "./components/PaymentForm/PaymentForm";
 //TODO: HOME, ABOUT page, error404, contact form, Footer
 //TODO: Fixes CSS mobile
+//TODO: @media for tablet and XL screens
 function App() {
   return (
     <BrowserRouter>

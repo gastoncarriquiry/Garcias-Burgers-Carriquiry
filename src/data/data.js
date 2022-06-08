@@ -1,4 +1,4 @@
-//Although this database has no use, its much more easier to edit.
+//Although this database has no use, its much more easier to edit than firestore.
 
 //TODO: CONSEGUIR TODAS LAS IMAGENES
 
@@ -2436,8 +2436,8 @@ export const itemList = [
     ],
   },
   {
-    id: "01",
-    title: "01 Carne",
+    id: "01carne",
+    title: "01 - Carne",
     category: "empanadas",
     description: "Empanada de carne picada, huevo duro y aditivos de la cocina criolla.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2445,10 +2445,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "02",
-    title: "02 Carne con Pasas",
+    id: "02carneYPasas",
+    title: "02 - Carne con Pasas",
     category: "empanadas",
     description: "Empanada de carne picada endulzada y pasas de uva.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2456,10 +2457,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "04",
-    title: "04 Carne con Panceta y Aceitunas",
+    id: "04carnePancetaAceitunas",
+    title: "04 - Carne con Panceta y Aceitunas",
     category: "empanadas",
     description: "Empanada de carne picada magra, aceitunas y panceta.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2467,10 +2469,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "05",
-    title: "05 Chilena",
+    id: "05chilena",
+    title: "05 - Chilena",
     category: "empanadas",
     description: "Empanada de carne magra, aceitunas y salsa tabasco.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2478,10 +2481,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "06",
-    title: "06 Pollo",
+    id: "06pollo",
+    title: "06 - Pollo",
     category: "empanadas",
     description: "Empanada de suprema de pollo, champiñones, queso y condimentos.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2489,10 +2493,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "08",
-    title: "08 Gallega",
+    id: "08gallega",
+    title: "08 - Gallega",
     category: "empanadas",
     description: "Empanada de atún desmenuzado, tomate al natural y aceitunas.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2500,10 +2505,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "19",
-    title: "19 Queso con Bondiola",
+    id: "19quesoYBondiola",
+    title: "19 - Queso con Bondiola",
     category: "empanadas",
     description: "Empanada de queso, bondiola y rúcula.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2511,10 +2517,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "20",
-    title: "20 Queso y Aceitunas",
+    id: "20quesoYAceitunas",
+    title: "20 - Queso y Aceitunas",
     category: "empanadas",
     description: "Empanada de variedades de quesos con aceitunas.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2522,10 +2529,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "21",
-    title: "21 Americana",
+    id: "21americana",
+    title: "21 - Americana",
     category: "empanadas",
     description: "Empanada de queso, panceta y huevo.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2533,10 +2541,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "22",
-    title: "22 Queso y Cebolla",
+    id: "22quesoYCebolla",
+    title: "22 - Queso y Cebolla",
     category: "empanadas",
     description: "Empanada de variedades de quesos con cebolla salteada.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2544,10 +2553,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "23",
-    title: "23 Calabresa",
+    id: "23calabresa",
+    title: "23 - Calabresa",
     category: "empanadas",
     description: "Empanada de selección de quesos con longaniza tipo turinesa.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2555,10 +2565,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "24",
-    title: "24 4 Quesos",
+    id: "24cuatroQuesos",
+    title: "24 - 4 Quesos",
     category: "empanadas",
     description: "Empanada de quesos muzzarella, sbrinz, gruyere y colonia.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2566,10 +2577,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "25",
-    title: "25 Roquefort",
+    id: "25roquefort",
+    title: "25 - Roquefort",
     category: "empanadas",
     description: "Empanada de roquefot, apio y nueza.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2577,10 +2589,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "27",
-    title: "27 Caprese",
+    id: "27caprese",
+    title: "27 - Caprese",
     category: "empanadas",
     description: "Empanada de queso muzzarella, tomate al natural y albahaca fresca.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2588,10 +2601,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "28",
-    title: "28 Napolitana",
+    id: "28napolitana",
+    title: "28 - Napolitana",
     category: "empanadas",
     description: "Empanada de selección de quesos, tomate al natural y jamón.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2599,10 +2613,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "31",
-    title: "31 Jamón y Queso",
+    id: "31jamonYQueso",
+    title: "31 - Jamón y Queso",
     category: "empanadas",
     description: "Empanada de variedades de quesos y jamón cocido.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2610,10 +2625,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "32",
-    title: "32 Jamón y Choclo",
+    id: "32jamonYChoclo",
+    title: "32 - Jamón y Choclo",
     category: "empanadas",
     description: "Empanada de granos de choclo, jamón cocido y salsa rosa.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2621,10 +2637,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "34",
-    title: "34 Carioca",
+    id: "34carioca",
+    title: "34 - Carioca",
     category: "empanadas",
     description: "Empanada de jamón, pollo, tomate, orégano y queso crema.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2632,10 +2649,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "41",
-    title: "41 Verdura",
+    id: "41verdura",
+    title: "41 - Verdura",
     category: "empanadas",
     description: "Empanada de acelga, ricotta, selección de quesos y condimentos.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2643,10 +2661,11 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
-    id: "43",
-    title: "43 Vegetariana",
+    id: "43vegetariana",
+    title: "43 - Vegetariana",
     category: "empanadas",
     description: "Empanada de berenjena, zuquini, puerro y queso muzzarella.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
@@ -2654,6 +2673,7 @@ export const itemList = [
     price: 78,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "fritas",
@@ -2665,6 +2685,7 @@ export const itemList = [
     price: 180,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "fritasCheddarPanceta",
@@ -2676,6 +2697,7 @@ export const itemList = [
     price: 310,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "rusticasCheddarPanceta",
@@ -2687,6 +2709,7 @@ export const itemList = [
     price: 335,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "fritasPancetaCarne",
@@ -2698,6 +2721,7 @@ export const itemList = [
     price: 365,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "rusticasPancetaCarne",
@@ -2709,6 +2733,7 @@ export const itemList = [
     price: 400,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "bastonesMuzzarella",
@@ -2720,6 +2745,7 @@ export const itemList = [
     price: 210,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "arosCebolla",
@@ -2731,6 +2757,7 @@ export const itemList = [
     price: 210,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "rusticas",
@@ -2742,6 +2769,7 @@ export const itemList = [
     price: 210,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "fritasChampi",
@@ -2753,6 +2781,7 @@ export const itemList = [
     price: 295,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "nuggets",
@@ -2764,6 +2793,7 @@ export const itemList = [
     price: 220,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "refresco600ml",
@@ -2775,6 +2805,7 @@ export const itemList = [
     price: 80,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "refrescoLitro",
@@ -2786,6 +2817,7 @@ export const itemList = [
     price: 160,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "aguaCgas",
@@ -2797,6 +2829,7 @@ export const itemList = [
     price: 55,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "aguaSgas",
@@ -2808,6 +2841,7 @@ export const itemList = [
     price: 55,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "powerade",
@@ -2819,6 +2853,7 @@ export const itemList = [
     price: 60,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "lata",
@@ -2830,6 +2865,7 @@ export const itemList = [
     price: 60,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "pilsenLitro",
@@ -2841,6 +2877,7 @@ export const itemList = [
     price: 175,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "patriciaLitro",
@@ -2852,6 +2889,7 @@ export const itemList = [
     price: 210,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "stellaLitro",
@@ -2863,6 +2901,7 @@ export const itemList = [
     price: 245,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "zillertalLitro",
@@ -2874,6 +2913,7 @@ export const itemList = [
     price: 230,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "corona",
@@ -2885,6 +2925,7 @@ export const itemList = [
     price: 220,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "pilsenLata",
@@ -2896,6 +2937,7 @@ export const itemList = [
     price: 95,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "patriciaLata",
@@ -2907,6 +2949,7 @@ export const itemList = [
     price: 105,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "zillertalLata",
@@ -2918,6 +2961,7 @@ export const itemList = [
     price: 115,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "stellaLata",
@@ -2929,6 +2973,7 @@ export const itemList = [
     price: 120,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "volcan",
@@ -2940,6 +2985,7 @@ export const itemList = [
     price: 80,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "volcanDulce",
@@ -2951,6 +2997,7 @@ export const itemList = [
     price: 100,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "principeHumberto",
@@ -2962,6 +3009,7 @@ export const itemList = [
     price: 80,
     available: true,
     initial: 1,
+    extras: [],
   },
   {
     id: "salchichon",
@@ -2973,5 +3021,6 @@ export const itemList = [
     price: 250,
     available: true,
     initial: 1,
+    extras: [],
   },
 ];

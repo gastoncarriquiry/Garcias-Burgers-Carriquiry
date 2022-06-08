@@ -34,6 +34,7 @@ const PaymentForm = () => {
     },
   });
   const [formValid, setFormValid] = useState(false);
+  const [formError, setFormError] = useState("");
   const delivery = useRef(null);
   const [orderSent, setOrderSent] = useState(false);
   const [orderRef, setOrderRef] = useState(undefined);
@@ -41,54 +42,62 @@ const PaymentForm = () => {
 
   const generateOrder = (evt) => {
     evt.preventDefault();
-    setLoading(true);
-    evt.target.setAttribute("disabled", true);
-    setOrderSent(true);
-    let order = {};
-    order.buyer = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      address: isDelivery
-        ? form.address2 !== ""
-          ? `${form.address1} esq. ${form.address2}`
-          : form.address1
-        : "S/D - takeaway",
-    };
-    order.comment = form.comment;
-    order.type = isDelivery ? "delivery" : "takeaway";
-    order.total = getTotal();
-    order.date = new Date();
-    order.items = cartList.map((item) => {
-      const id = item.id;
-      const product = item.title;
-      const price = totalPrice(item.price, item.quantity, item.extrasPrice);
-      const quantity = item.quantity;
-      const extras =
-        item.extrasSelected !== undefined ? item.extrasSelected.map((extra) => extra.ref) : null;
-      const comment = item.comment;
+    if (formValid) {
+      setFormError("");
+      setLoading(true);
+      evt.target.setAttribute("disabled", true);
+      setOrderSent(true);
+      let order = {};
+      order.buyer = {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        address: isDelivery
+          ? form.address2 !== ""
+            ? `${form.address1} esq. ${form.address2}`
+            : form.address1
+          : "S/D - takeaway",
+      };
+      order.comment = form.comment;
+      order.type = isDelivery ? "delivery" : "takeaway";
+      order.total = getTotal();
+      order.date = new Date();
+      order.items = cartList.map((item) => {
+        const id = item.id;
+        const product = item.title;
+        const price = totalPrice(item.price, item.quantity, item.extrasPrice);
+        const quantity = item.quantity;
+        const extras =
+          item.extrasSelected !== undefined ? item.extrasSelected.map((extra) => extra.ref) : null;
+        const comment = item.comment;
 
-      if (item.comment && item.extrasSelected !== undefined && item.extrasSelected.length > 0) {
-        return { id, product, price, quantity, extras, comment };
-      } else if (item.comment) {
-        return { id, product, price, quantity, comment };
-      } else if (item.extrasSelected !== undefined && item.extrasSelected.length > 0) {
-        return { id, product, price, quantity, extras };
-      } else {
-        return { id, product, price, quantity };
-      }
-    });
-
-    // CREATE ORDER
-    const db = getFirestore();
-    const queryCollection = collection(db, "orders");
-    addDoc(queryCollection, order)
-      .then((res) => setOrderRef(res.id))
-      .catch((err) => console.error(err))
-      .finally(() => {
-        clearCart();
-        setLoading(false);
+        if (item.comment && item.extrasSelected !== undefined && item.extrasSelected.length > 0) {
+          return { id, product, price, quantity, extras, comment };
+        } else if (item.comment) {
+          return { id, product, price, quantity, comment };
+        } else if (item.extrasSelected !== undefined && item.extrasSelected.length > 0) {
+          return { id, product, price, quantity, extras };
+        } else {
+          return { id, product, price, quantity };
+        }
       });
+
+      // CREATE ORDER
+      const db = getFirestore();
+      const queryCollection = collection(db, "orders");
+      addDoc(queryCollection, order)
+        .then((res) => setOrderRef(res.id))
+        .catch((err) => console.error(err))
+        .finally(() => {
+          clearCart();
+          setLoading(false);
+        });
+    } else {
+      setFormError("Asegúrese que todos los campos sean correctos.");
+      setTimeout(() => {
+        setFormError("");
+      }, 5000);
+    }
   };
 
   useEffect(() => setLastEvent(delivery.current), []);
@@ -341,12 +350,8 @@ const PaymentForm = () => {
                 </ul>
               </div>
             )}
-            <Button
-              disabled={!formValid}
-              type="submit"
-              text="Enviar Pedido"
-              click={(evt) => generateOrder(evt)}
-            />
+            <Button type="submit" text="Enviar Pedido" click={(evt) => generateOrder(evt)} />
+            <p className="error">{formError}</p>
             {loading ? <Loader /> : <></>}
           </fieldset>
         </form>
