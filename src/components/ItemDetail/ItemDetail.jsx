@@ -87,8 +87,6 @@ const ItemDetail = ({ item }) => {
         }
       }
       if (itemIndex !== undefined) {
-        console.log(itemIndex);
-        console.log(cartList[itemIndex], cartList[itemIndex].quantity);
         if (cartList[itemIndex].quantity + qty > 50) {
           cartList[itemIndex].quantity = 50;
           alert(

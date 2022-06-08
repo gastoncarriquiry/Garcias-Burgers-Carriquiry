@@ -20,6 +20,13 @@ function NavBar() {
       navBar.current.classList.add("mobile");
     }
   };
+
+  //close menu when link is clicked
+  const handleClick = () => {
+    document.querySelector("#nav").classList.remove("is-active");
+    document.querySelector(".links").style.display = "none";
+  };
+
   return (
     <header className="NavBar" ref={navBar}>
       <div className="container">
@@ -30,16 +37,16 @@ function NavBar() {
           <HamburgerMenu />
           <nav className="links">
             <NavLink to="/">
-              <button>INICIO</button>
+              <button onClick={handleClick}>INICIO</button>
             </NavLink>
             <NavLink to="/menu/hamburguesas">
-              <button>MENÚ</button>
+              <button onClick={handleClick}>MENÚ</button>
             </NavLink>
             <NavLink to="/nosotros">
-              <button>NOSOTROS</button>
+              <button onClick={handleClick}>NOSOTROS</button>
             </NavLink>
             <NavLink to="/contacto">
-              <button>CONTACTO</button>
+              <button onClick={handleClick}>CONTACTO</button>
             </NavLink>
           </nav>
           <NavLink className="Cart-Widget" to="/carrito">

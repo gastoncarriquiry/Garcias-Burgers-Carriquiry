@@ -1,9 +1,10 @@
 import "./HamburgerMenu.css";
+import { useRef } from "react";
 
 //TODO: close hamburger menu when navigated or click outside
 function HamburgerMenu() {
+  const nav = document.querySelector("#nav");
   const hamburgerAction = () => {
-    const nav = document.querySelector("#nav");
     nav.classList.toggle("is-active");
     if (nav.classList.contains("is-active")) {
       document.querySelector(".links").style.display = "block";
@@ -11,6 +12,14 @@ function HamburgerMenu() {
       document.querySelector(".links").style.display = "none";
     }
   };
+
+  document.addEventListener("click", (evt) => {
+    let checkClickInNav = nav.contains(evt.target);
+    if (!checkClickInNav && nav.classList.contains("is-active")) {
+      document.querySelector("#nav").classList.remove("is-active");
+      document.querySelector(".links").style.display = "none";
+    }
+  });
 
   return (
     <button

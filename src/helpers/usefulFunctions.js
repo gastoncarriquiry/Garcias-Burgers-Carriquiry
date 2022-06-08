@@ -41,6 +41,3 @@ export const mockFetch = (id) => {
 };
 
 //#endregion
-
-//#region
-//#endregion
