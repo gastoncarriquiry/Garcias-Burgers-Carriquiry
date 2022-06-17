@@ -4,3 +4,7 @@
   --light-color: white;
   --dark-color: black;
 }
+
+#root {
+  background: url("https://i.postimg.cc/C5RTsJLS/background.png") fixed;
+}

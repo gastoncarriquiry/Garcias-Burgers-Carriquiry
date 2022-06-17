@@ -2,7 +2,7 @@ import "./FormInput.css";
 
 const FormInput = ({ type, onAction, placeholder, id, value, errorText, labelText }) => {
   return (
-    <div>
+    <div className="form-inputs">
       {type === "textarea" ? (
         <>
           <label htmlFor={id}>{labelText}</label>
@@ -12,6 +12,7 @@ const FormInput = ({ type, onAction, placeholder, id, value, errorText, labelTex
             defaultValue={value}
             onKeyUp={onAction}
           ></textarea>
+          <p className="error">{errorText}</p>
         </>
       ) : (
         <>

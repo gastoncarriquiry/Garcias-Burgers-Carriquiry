@@ -1,8 +1,5 @@
 //Although this database has no use, its much more easier to edit than firestore.
-
-//TODO: CONSEGUIR TODAS LAS IMAGENES
-
-/* const extrasList = [
+export const extrasList = [
   {
     ref: "panQueso",
     text: "Pan de queso",
@@ -11,27 +8,27 @@
   {
     ref: "burgerExtra",
     text: "Burger extra",
-    price: 125,
+    price: 150,
   },
   {
     ref: "huevoFrito",
     text: "Huevo frito",
-    price: 30,
+    price: 40,
   },
   {
     ref: "extraPanceta",
     text: "Extra panceta",
-    price: 55,
+    price: 70,
   },
   {
     ref: "cheddarPancetaGuarnicion",
     text: "Cheddar y panceta en guarnición",
-    price: 100,
+    price: 130,
   },
   {
     ref: "extraCheddar",
     text: "Cheddar extra",
-    price: 55,
+    price: 70,
   },
   {
     ref: "cambioXRusticas",
@@ -46,17 +43,17 @@
   {
     ref: "extraLomo",
     text: "Extra lomo",
-    price: 145,
+    price: 1705,
   },
   {
     ref: "bañoCheddar",
     text: "Baño de cheddar",
-    price: 45,
+    price: 30,
   },
   {
     ref: "tomate",
     text: "Tomate",
-    price: 25,
+    price: 30,
   },
   {
     ref: "lechuga",
@@ -66,14 +63,19 @@
   {
     ref: "pepinillos",
     text: "Pepinillos",
-    price: 40,
+    price: 90,
+  },
+  {
+    ref: "muzzarella",
+    text: "Extra muzzarella",
+    price: 60,
   },
   {
     ref: "cremaChampiGuarnicion",
     text: "Crema champi en guarnición",
     price: 65,
   },
-];*/
+];
 
 export const itemList = [
   {
@@ -95,27 +97,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -130,17 +132,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -150,7 +152,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -173,27 +180,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -208,17 +215,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -228,7 +235,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -252,27 +264,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -287,95 +299,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
-      },
-      {
-        ref: "lechuga",
-        text: "Lechuga",
-        price: 25,
-      },
-      {
-        ref: "pepinillos",
-        text: "Pepinillos",
-        price: 40,
-      },
-      {
-        ref: "cremaChampiGuarnicion",
-        text: "Crema champi en guarnición",
-        price: 65,
-      },
-    ],
-  },
-  {
-    id: "mexicana",
-    title: "Mexicana",
-    category: "hamburguesas",
-    description: "150 grs de carne, cebolla colorada, queso emmental, morrón, mayonesa, tabasco.",
-    picURL: "https://i.postimg.cc/TYgNKCM0/burger-Mexicana.png",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 480,
-    available: true,
-    initial: 1,
-    extras: [
-      {
-        ref: "panQueso",
-        text: "Pan de queso",
-        price: 15,
-      },
-      {
-        ref: "burgerExtra",
-        text: "Burger extra",
-        price: 125,
-      },
-      {
-        ref: "huevoFrito",
-        text: "Huevo frito",
         price: 30,
       },
       {
-        ref: "extraPanceta",
-        text: "Extra panceta",
-        price: 55,
-      },
-      {
-        ref: "cheddarPancetaGuarnicion",
-        text: "Cheddar y panceta en guarnición",
-        price: 100,
-      },
-      {
-        ref: "extraCheddar",
-        text: "Cheddar extra",
-        price: 55,
-      },
-      {
-        ref: "cambioXRusticas",
-        text: "Cambio por rústicas en guarnición",
-        price: 50,
-      },
-      {
-        ref: "cambioXAros",
-        text: "Cambio por aros de cebolla en guarnición",
-        price: 50,
-      },
-      {
-        ref: "bañoCheddar",
-        text: "Baño de cheddar",
-        price: 45,
-      },
-      {
-        ref: "tomate",
-        text: "Tomate",
-        price: 25,
-      },
-      {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -385,7 +319,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -408,27 +347,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -443,17 +382,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -463,7 +402,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -486,27 +430,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -521,17 +465,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -541,7 +485,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -565,27 +514,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -600,17 +549,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -620,7 +569,95 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
+      },
+    ],
+  },
+  {
+    id: "mexicana",
+    title: "Mexicana",
+    category: "hamburguesas",
+    description: "150 grs de carne, cebolla colorada, queso emmental, morrón, mayonesa, tabasco.",
+    picURL: "https://i.postimg.cc/TYgNKCM0/burger-Mexicana.png",
+    additionals: "Guarnición de papas fritas incluida.",
+    price: 480,
+    available: true,
+    initial: 1,
+    extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
+      {
+        ref: "burgerExtra",
+        text: "Burger extra",
+        price: 150,
+      },
+      {
+        ref: "huevoFrito",
+        text: "Huevo frito",
+        price: 40,
+      },
+      {
+        ref: "extraPanceta",
+        text: "Extra panceta",
+        price: 70,
+      },
+      {
+        ref: "cheddarPancetaGuarnicion",
+        text: "Cheddar y panceta en guarnición",
+        price: 130,
+      },
+      {
+        ref: "extraCheddar",
+        text: "Cheddar extra",
+        price: 70,
+      },
+      {
+        ref: "cambioXRusticas",
+        text: "Cambio por rústicas en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cambioXAros",
+        text: "Cambio por aros de cebolla en guarnición",
+        price: 50,
+      },
+      {
+        ref: "bañoCheddar",
+        text: "Baño de cheddar",
+        price: 170,
+      },
+      {
+        ref: "tomate",
+        text: "Tomate",
+        price: 30,
+      },
+      {
+        ref: "lechuga",
+        text: "Lechuga",
+        price: 30,
+      },
+      {
+        ref: "pepinillos",
+        text: "Pepinillos",
+        price: 40,
+      },
+      {
+        ref: "cremaChampiGuarnicion",
+        text: "Crema champi en guarnición",
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -643,27 +680,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -678,17 +715,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -698,7 +735,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -721,27 +763,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -756,17 +798,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -776,7 +818,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -799,27 +846,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -834,17 +881,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -854,7 +901,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -878,27 +930,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -913,17 +965,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -933,7 +985,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -956,27 +1013,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -991,17 +1048,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1011,7 +1068,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -1034,27 +1096,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -1069,17 +1131,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1089,7 +1151,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -1112,27 +1179,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -1147,17 +1214,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1167,7 +1234,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -1190,27 +1262,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -1225,17 +1297,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1245,7 +1317,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -1268,27 +1345,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -1303,17 +1380,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1323,7 +1400,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -1346,27 +1428,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -1381,17 +1463,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1401,7 +1483,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -1411,6 +1498,89 @@ export const itemList = [
     category: "hamburguesas",
     description:
       "200 grs de carne en 2 burgers, salsa especial, lechuga, pepinillos, cebolla y queso cheddar x2.",
+    picURL: "https://picsum.photos/200",
+    additionals: "Guarnición de papas fritas incluida.",
+    price: 420,
+    available: true,
+    initial: 1,
+    extras: [
+      {
+        ref: "panQueso",
+        text: "Pan de queso",
+        price: 15,
+      },
+      {
+        ref: "burgerExtra",
+        text: "Burger extra",
+        price: 150,
+      },
+      {
+        ref: "huevoFrito",
+        text: "Huevo frito",
+        price: 40,
+      },
+      {
+        ref: "extraPanceta",
+        text: "Extra panceta",
+        price: 70,
+      },
+      {
+        ref: "cheddarPancetaGuarnicion",
+        text: "Cheddar y panceta en guarnición",
+        price: 130,
+      },
+      {
+        ref: "extraCheddar",
+        text: "Cheddar extra",
+        price: 70,
+      },
+      {
+        ref: "cambioXRusticas",
+        text: "Cambio por rústicas en guarnición",
+        price: 50,
+      },
+      {
+        ref: "cambioXAros",
+        text: "Cambio por aros de cebolla en guarnición",
+        price: 50,
+      },
+      {
+        ref: "bañoCheddar",
+        text: "Baño de cheddar",
+        price: 170,
+      },
+      {
+        ref: "tomate",
+        text: "Tomate",
+        price: 30,
+      },
+      {
+        ref: "lechuga",
+        text: "Lechuga",
+        price: 30,
+      },
+      {
+        ref: "pepinillos",
+        text: "Pepinillos",
+        price: 40,
+      },
+      {
+        ref: "cremaChampiGuarnicion",
+        text: "Crema champi en guarnición",
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
+      },
+    ],
+  },
+  {
+    id: "pulledPorkBurger",
+    title: "Pulled Pork burger",
+    category: "hamburguesas",
+    description: "Cerdo desmechado a la cerveza y barbacoa, queso cheddar y tomate.",
     picURL: "https://picsum.photos/200",
     additionals: "Guarnición de papas fritas incluida.",
     price: 310,
@@ -1425,27 +1595,27 @@ export const itemList = [
       {
         ref: "burgerExtra",
         text: "Burger extra",
-        price: 125,
+        price: 150,
       },
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "extraCheddar",
         text: "Cheddar extra",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cambioXRusticas",
@@ -1460,95 +1630,17 @@ export const itemList = [
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
-      },
-      {
-        ref: "lechuga",
-        text: "Lechuga",
-        price: 25,
-      },
-      {
-        ref: "pepinillos",
-        text: "Pepinillos",
-        price: 40,
-      },
-      {
-        ref: "cremaChampiGuarnicion",
-        text: "Crema champi en guarnición",
-        price: 65,
-      },
-    ],
-  },
-  {
-    id: "pulledPorkBurger",
-    title: "Pulled Pork burger",
-    category: "hamburguesas",
-    description: "Cerdo desmechado a la cerveza y barbacoa, queso cheddar y tomate.",
-    picURL: "https://picsum.photos/200",
-    additionals: "Guarnición de papas fritas incluida.",
-    price: 400,
-    available: true,
-    initial: 1,
-    extras: [
-      {
-        ref: "panQueso",
-        text: "Pan de queso",
-        price: 15,
-      },
-      {
-        ref: "burgerExtra",
-        text: "Burger extra",
-        price: 125,
-      },
-      {
-        ref: "huevoFrito",
-        text: "Huevo frito",
         price: 30,
       },
       {
-        ref: "extraPanceta",
-        text: "Extra panceta",
-        price: 55,
-      },
-      {
-        ref: "cheddarPancetaGuarnicion",
-        text: "Cheddar y panceta en guarnición",
-        price: 100,
-      },
-      {
-        ref: "extraCheddar",
-        text: "Cheddar extra",
-        price: 55,
-      },
-      {
-        ref: "cambioXRusticas",
-        text: "Cambio por rústicas en guarnición",
-        price: 50,
-      },
-      {
-        ref: "cambioXAros",
-        text: "Cambio por aros de cebolla en guarnición",
-        price: 50,
-      },
-      {
-        ref: "bañoCheddar",
-        text: "Baño de cheddar",
-        price: 45,
-      },
-      {
-        ref: "tomate",
-        text: "Tomate",
-        price: 25,
-      },
-      {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1558,7 +1650,12 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
+      },
+      {
+        ref: "muzzarella",
+        text: "Extra muzzarella",
+        price: 60,
       },
     ],
   },
@@ -1569,24 +1666,24 @@ export const itemList = [
     description: "Lomo, lechuga, tomate, mayonesa, morrón, huevo frito.",
     picURL: "https://picsum.photos/200",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 360,
+    price: 400,
     available: true,
     initial: 1,
     extras: [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cambioXRusticas",
@@ -1601,17 +1698,17 @@ export const itemList = [
       {
         ref: "extraLomo",
         text: "Extra lomo",
-        price: 145,
+        price: 180,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1621,7 +1718,7 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -1633,24 +1730,24 @@ export const itemList = [
       "Lomo, lechuga, tomate, morrón, aceitunas, jamón, queso muzzarella, panceta, huevo frito.",
     picURL: "https://picsum.photos/200",
     additionals: "Guarnición de papas fritas incluida.",
-    price: 430,
+    price: 480,
     available: true,
     initial: 1,
     extras: [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cambioXRusticas",
@@ -1665,17 +1762,17 @@ export const itemList = [
       {
         ref: "extraLomo",
         text: "Extra lomo",
-        price: 145,
+        price: 180,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1685,7 +1782,7 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -1697,24 +1794,24 @@ export const itemList = [
       "Lomo, jamón, queso muzzarella, panceta, huevo frito, morrón, aceitunas y palmitos.",
     picURL: "https://picsum.photos/200",
     additionals: "2 guarniciones incluidas (ensalada mixta, papas fritas).",
-    price: 450,
+    price: 500,
     available: true,
     initial: 1,
     extras: [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cambioXRusticas",
@@ -1729,17 +1826,17 @@ export const itemList = [
       {
         ref: "extraLomo",
         text: "Extra lomo",
-        price: 145,
+        price: 180,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1749,7 +1846,7 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -1760,25 +1857,25 @@ export const itemList = [
     description:
       "Lomo, jamón, queso muzzarella, panceta, huevo frito, morrón, aceitunas y palmitos.",
     picURL: "https://picsum.photos/200",
-    additionals: "4 guarniciones incluidas (ensalada mixta, papas fritas).",
-    price: 880,
+    additionals: "2 porciones de ensalada mixta y/o papas fritas incluidas.",
+    price: 960,
     available: true,
     initial: 1,
     extras: [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "extraPanceta",
         text: "Extra panceta",
-        price: 55,
+        price: 70,
       },
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cambioXRusticas",
@@ -1793,17 +1890,17 @@ export const itemList = [
       {
         ref: "extraLomo",
         text: "Extra lomo",
-        price: 145,
+        price: 180,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "pepinillos",
@@ -1813,7 +1910,7 @@ export const itemList = [
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -1831,22 +1928,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
     ],
   },
@@ -1864,22 +1961,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -1894,12 +1991,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -1918,22 +2015,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -1948,12 +2045,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -1971,22 +2068,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2001,12 +2098,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2024,22 +2121,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2054,12 +2151,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2077,22 +2174,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2107,12 +2204,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2130,22 +2227,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2160,12 +2257,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2183,22 +2280,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2213,12 +2310,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2236,22 +2333,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2266,12 +2363,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2289,22 +2386,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2319,12 +2416,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2343,22 +2440,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2373,12 +2470,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2396,22 +2493,22 @@ export const itemList = [
       {
         ref: "huevoFrito",
         text: "Huevo frito",
-        price: 30,
+        price: 40,
       },
       {
         ref: "bañoCheddar",
         text: "Baño de cheddar",
-        price: 45,
+        price: 170,
       },
       {
         ref: "tomate",
         text: "Tomate",
-        price: 25,
+        price: 30,
       },
       {
         ref: "lechuga",
         text: "Lechuga",
-        price: 25,
+        price: 30,
       },
       {
         ref: "cambioXRusticas",
@@ -2426,12 +2523,12 @@ export const itemList = [
       {
         ref: "cheddarPancetaGuarnicion",
         text: "Cheddar y panceta en guarnición",
-        price: 100,
+        price: 130,
       },
       {
         ref: "cremaChampiGuarnicion",
         text: "Crema champi en guarnición",
-        price: 65,
+        price: 90,
       },
     ],
   },
@@ -2442,7 +2539,7 @@ export const itemList = [
     description: "Empanada de carne picada, huevo duro y aditivos de la cocina criolla.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2454,7 +2551,7 @@ export const itemList = [
     description: "Empanada de carne picada endulzada y pasas de uva.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2466,7 +2563,7 @@ export const itemList = [
     description: "Empanada de carne picada magra, aceitunas y panceta.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2478,7 +2575,7 @@ export const itemList = [
     description: "Empanada de carne magra, aceitunas y salsa tabasco.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2490,7 +2587,7 @@ export const itemList = [
     description: "Empanada de suprema de pollo, champiñones, queso y condimentos.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2502,7 +2599,7 @@ export const itemList = [
     description: "Empanada de atún desmenuzado, tomate al natural y aceitunas.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2514,7 +2611,7 @@ export const itemList = [
     description: "Empanada de queso, bondiola y rúcula.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2526,7 +2623,7 @@ export const itemList = [
     description: "Empanada de variedades de quesos con aceitunas.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2538,7 +2635,7 @@ export const itemList = [
     description: "Empanada de queso, panceta y huevo.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2550,7 +2647,7 @@ export const itemList = [
     description: "Empanada de variedades de quesos con cebolla salteada.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2562,7 +2659,7 @@ export const itemList = [
     description: "Empanada de selección de quesos con longaniza tipo turinesa.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2574,19 +2671,19 @@ export const itemList = [
     description: "Empanada de quesos muzzarella, sbrinz, gruyere y colonia.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
   },
   {
-    id: "25roquefort",
-    title: "25 - Roquefort",
+    id: "26roquefort",
+    title: "26 - Roquefort",
     category: "empanadas",
     description: "Empanada de roquefot, apio y nueza.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2598,7 +2695,7 @@ export const itemList = [
     description: "Empanada de queso muzzarella, tomate al natural y albahaca fresca.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2610,7 +2707,7 @@ export const itemList = [
     description: "Empanada de selección de quesos, tomate al natural y jamón.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2622,7 +2719,7 @@ export const itemList = [
     description: "Empanada de variedades de quesos y jamón cocido.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2634,7 +2731,7 @@ export const itemList = [
     description: "Empanada de granos de choclo, jamón cocido y salsa rosa.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2646,7 +2743,7 @@ export const itemList = [
     description: "Empanada de jamón, pollo, tomate, orégano y queso crema.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2658,7 +2755,7 @@ export const itemList = [
     description: "Empanada de acelga, ricotta, selección de quesos y condimentos.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
     available: true,
     initial: 1,
     extras: [],
@@ -2670,7 +2767,43 @@ export const itemList = [
     description: "Empanada de berenjena, zuquini, puerro y queso muzzarella.",
     picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
     additionals: "",
-    price: 78,
+    price: 80,
+    available: true,
+    initial: 1,
+    extras: [],
+  },
+  {
+    id: "empanadaDulce1",
+    title: "Dulce de Leche",
+    category: "empanadas",
+    description: "Empanada dulce de dulce de leche.",
+    picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
+    additionals: "",
+    price: 82,
+    available: true,
+    initial: 1,
+    extras: [],
+  },
+  {
+    id: "empanadaDulce2",
+    title: "Dulce de Leche con Chocolate",
+    category: "empanadas",
+    description: "Empanada dulce de dulce de leche con chocolate.",
+    picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
+    additionals: "",
+    price: 82,
+    available: true,
+    initial: 1,
+    extras: [],
+  },
+  {
+    id: "empanadaDulce3",
+    title: "Dulce de Leche con Nuez",
+    category: "empanadas",
+    description: "Empanada dulce de dulce de leche con nuez.",
+    picURL: "https://i.postimg.cc/cJDSLYvs/empanadas.png",
+    additionals: "",
+    price: 82,
     available: true,
     initial: 1,
     extras: [],
@@ -2682,7 +2815,7 @@ export const itemList = [
     description: "Porción de papas fritas.",
     picURL: "https://i.postimg.cc/FsVgtqXM/papas-Fritas.png",
     additionals: "",
-    price: 180,
+    price: 200,
     available: true,
     initial: 1,
     extras: [],
@@ -2694,7 +2827,7 @@ export const itemList = [
     description: "Porción de papas fritas con queso cheddar y trozos de panceta.",
     picURL: "https://i.postimg.cc/X7bczWmK/papas-Cheddar-Bacon.png",
     additionals: "",
-    price: 310,
+    price: 340,
     available: true,
     initial: 1,
     extras: [],
@@ -2706,7 +2839,7 @@ export const itemList = [
     description: "Porción de papas rústicas con queso cheddar y trozos de panceta.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 335,
+    price: 365,
     available: true,
     initial: 1,
     extras: [],
@@ -2718,7 +2851,7 @@ export const itemList = [
     description: "Porción de papas fritas con queso cheddar y trozos de panceta y carne.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 365,
+    price: 385,
     available: true,
     initial: 1,
     extras: [],
@@ -2730,7 +2863,7 @@ export const itemList = [
     description: "Porción de papas rústicas con queso cheddar y trozos de panceta y carne.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 400,
+    price: 440,
     available: true,
     initial: 1,
     extras: [],
@@ -2742,7 +2875,7 @@ export const itemList = [
     description: "Porción de bastones de queso muzzarella.",
     picURL: "https://i.postimg.cc/QxtvVpNn/baston-Muzzarella.png",
     additionals: "",
-    price: 210,
+    price: 220,
     available: true,
     initial: 1,
     extras: [],
@@ -2754,7 +2887,7 @@ export const itemList = [
     description: "Porción de aros de cebolla.",
     picURL: "https://i.postimg.cc/9fT6CCXm/aros-Cebolla.png",
     additionals: "",
-    price: 210,
+    price: 250,
     available: true,
     initial: 1,
     extras: [],
@@ -2766,7 +2899,7 @@ export const itemList = [
     description: "Porción de papas rústicas.",
     picURL: "https://i.postimg.cc/Z5YPJcTC/papas-Rusticas.png",
     additionals: "",
-    price: 210,
+    price: 230,
     available: true,
     initial: 1,
     extras: [],
@@ -2778,7 +2911,7 @@ export const itemList = [
     description: "Porción de papas fritas con crema de champiñones.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 295,
+    price: 320,
     available: true,
     initial: 1,
     extras: [],
@@ -2790,7 +2923,19 @@ export const itemList = [
     description: "Porción de nuggets de pollo (12 unidades).",
     picURL: "https://i.postimg.cc/d1ZmzVJ6/nuggets.png",
     additionals: "",
-    price: 220,
+    price: 245,
+    available: true,
+    initial: 1,
+    extras: [],
+  },
+  {
+    id: "nuggetsCheddar",
+    title: "Nuggets con Baño de Cheddar",
+    category: "guarniciones",
+    description: "Porción de nuggets de pollo (12 unidades) con baño de queso cheddar.",
+    picURL: "https://i.postimg.cc/d1ZmzVJ6/nuggets.png",
+    additionals: "",
+    price: 380,
     available: true,
     initial: 1,
     extras: [],
@@ -2802,7 +2947,7 @@ export const itemList = [
     description: "Refresco de la línea Coca Cola de 600ml.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 80,
+    price: 85,
     available: true,
     initial: 1,
     extras: [],
@@ -2814,7 +2959,7 @@ export const itemList = [
     description: "Refresco de la línea Coca Cola de 1,5L.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 160,
+    price: 175,
     available: true,
     initial: 1,
     extras: [],
@@ -2823,10 +2968,10 @@ export const itemList = [
     id: "aguaCgas",
     title: "Agua 600ml con gas",
     category: "bebidas",
-    description: "",
+    description: "Agua mineral gasificada.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 55,
+    price: 60,
     available: true,
     initial: 1,
     extras: [],
@@ -2835,10 +2980,10 @@ export const itemList = [
     id: "aguaSgas",
     title: "Agua 600ml sin gas",
     category: "bebidas",
-    description: "",
+    description: "Agua mineral sin gas.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 55,
+    price: 60,
     available: true,
     initial: 1,
     extras: [],
@@ -2847,10 +2992,10 @@ export const itemList = [
     id: "powerade",
     title: "PowerAde",
     category: "bebidas",
-    description: "",
+    description: "Bebida hidratante saborizada.",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 60,
+    price: 65,
     available: true,
     initial: 1,
     extras: [],
@@ -2859,10 +3004,10 @@ export const itemList = [
     id: "lata",
     title: "Lata Refresco 354ml",
     category: "bebidas",
-    description: "",
+    description: "Refresco de la línea Coca Cola de 354ml",
     picURL: "https://picsum.photos/200",
     additionals: "",
-    price: 60,
+    price: 65,
     available: true,
     initial: 1,
     extras: [],
@@ -2874,7 +3019,7 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 175,
+    price: 215,
     available: true,
     initial: 1,
     extras: [],
@@ -2886,8 +3031,8 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 210,
-    available: true,
+    price: 230,
+    available: false,
     initial: 1,
     extras: [],
   },
@@ -2898,7 +3043,7 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 245,
+    price: 275,
     available: true,
     initial: 1,
     extras: [],
@@ -2910,7 +3055,7 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 230,
+    price: 270,
     available: true,
     initial: 1,
     extras: [],
@@ -2922,7 +3067,7 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 220,
+    price: 260,
     available: true,
     initial: 1,
     extras: [],
@@ -2934,7 +3079,7 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 95,
+    price: 105,
     available: true,
     initial: 1,
     extras: [],
@@ -2947,7 +3092,7 @@ export const itemList = [
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
     price: 105,
-    available: true,
+    available: false,
     initial: 1,
     extras: [],
   },
@@ -2958,7 +3103,7 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 115,
+    price: 125,
     available: true,
     initial: 1,
     extras: [],
@@ -2970,7 +3115,7 @@ export const itemList = [
     description: "",
     picURL: "https://i.postimg.cc/4x86y9dw/cervezas.png",
     additionals: "",
-    price: 120,
+    price: 130,
     available: true,
     initial: 1,
     extras: [],

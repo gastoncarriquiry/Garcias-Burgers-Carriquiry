@@ -101,6 +101,8 @@ const ItemDetail = ({ item }) => {
     } else {
       addProduct(qty);
     }
+    console.log(cartList);
+    localStorage.setItem("cartList", cartList);
   };
 
   const handleOnChange = (position) => {

@@ -4,6 +4,10 @@
 }
 
 .item-detail-container {
+  background-color: var(--light-color);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.05);
+  padding-top: 3.5em;
   width: 90vw;
   margin: auto;
   margin-bottom: 0.5em;
@@ -16,8 +20,16 @@
   margin-top: 3em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .item-detail-container {
+    padding-top: 0;
     width: 75vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .item-detail-container {
+    padding-top: 0;
+    width: 90vw;
   }
 }

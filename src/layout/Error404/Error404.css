@@ -1,23 +1,27 @@
 #error404 {
-  margin-top: -1em;
+  padding-top: 5em;
 }
 
 .screen1 {
-  background: url(https://i.postimg.cc/50kdJFsZ/404background.png) no-repeat fixed,
-    url(https://i.postimg.cc/vTgRZHjD/burger.png) no-repeat top 20% right fixed;
-  background-size: cover;
+  background: url(https://i.postimg.cc/KzYSC5DP/404background2.png) no-repeat top/cover fixed;
   height: 100vh;
-  padding-top: 15%;
-  padding-left: 10%;
+  padding: 0 1.5em;
+  padding-top: 40%;
   margin-top: -10em;
+  box-sizing: border-box;
+}
+
+.screen1 img {
+  display: none;
 }
 
 .screen2 {
   background: url(https://i.postimg.cc/KzYSC5DP/404background2.png) no-repeat;
   background-size: cover;
-  height: 80vh;
-  padding-left: 10%;
-  padding-top: 10%;
+  height: 88vh;
+  padding: 0 2em;
+  padding-top: 20%;
+  box-sizing: border-box;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.75);
   position: relative;
 }
@@ -44,6 +48,7 @@
 }
 
 #error404 ul {
+  padding-left: 1em;
   font-family: inherit;
   color: var(--background-color);
   list-style: none;
@@ -66,53 +71,14 @@
   font-size: 1em;
 }
 
-#error404 button:hover::after {
+#error404 button:hover::after,
+#error404 button:active::after {
   margin-left: 1rem;
   content: url(https://i.postimg.cc/5NQ1xndp/after-links.png);
 }
 
 .logoAnimation {
-  margin-left: 25%;
-  margin-top: 20%;
-}
-
-#animatedLogo1 {
-  transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(6rem);
-  transform-origin: 50% 100%;
-  transform-style: preserve-3d;
-  filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
-  transition: 0.9s ease transform;
-  position: absolute;
-}
-
-#animatedLogo2 {
-  transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(4rem);
-  transform-origin: 50% 100%;
-  transform-style: preserve-3d;
-  filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
-  transition: 0.9s ease transform;
-  position: absolute;
-}
-
-#animatedLogo3 {
-  transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(2rem);
-  transform-origin: 50% 100%;
-  transform-style: preserve-3d;
-  filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
-  transition: 0.9s ease transform;
-  position: absolute;
-}
-
-.logoAnimation:hover > #animatedLogo1 {
-  transform: scale(1.5);
-}
-
-.logoAnimation:hover > #animatedLogo2 {
-  transform: scale(1.5);
-}
-
-.logoAnimation:hover > #animatedLogo3 {
-  transform: scale(1.5);
+  display: none;
 }
 
 #error404 section {
@@ -120,4 +86,191 @@
   box-shadow: none;
   padding: 0;
   display: flex;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .screen1 {
+    padding: 0 5em;
+    padding-top: 40%;
+    margin-top: -10em;
+  }
+  .screen2 {
+    height: 94vh;
+    padding: 0 4em;
+    padding-top: 20%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.75);
+    position: relative;
+  }
+
+  #error404 ul {
+    padding-left: 0;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .screen1 {
+    background: url(https://i.postimg.cc/50kdJFsZ/404background.png) no-repeat top/cover fixed,
+      url(https://i.postimg.cc/fRFrT0R9/burger.png) no-repeat top right/82% fixed;
+    padding: 0 3em;
+    padding-top: 15%;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .screen2 {
+    height: 100vh;
+    padding: 0 5em;
+    padding-top: 15%;
+  }
+
+  #error404 ul {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  #error404 {
+    margin-top: -1em;
+  }
+
+  .screen1 {
+    background: url(https://i.postimg.cc/50kdJFsZ/404background.png) no-repeat top/cover fixed,
+      url(https://i.postimg.cc/fRFrT0R9/burger.png) no-repeat top 20% right/92% fixed;
+    height: 102vh;
+    padding: 0 5em;
+    padding-top: 20%;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .screen1 img {
+    display: block;
+  }
+  .screen2 {
+    height: 100vh;
+    padding: 0 8em;
+    padding-top: 20%;
+  }
+
+  #error404 ul {
+    padding-left: 1em;
+  }
+
+  .logoAnimation {
+    display: block;
+    margin-left: 15%;
+    margin-top: 25%;
+  }
+
+  #animatedLogo1 {
+    transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(6rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
+    transition: 0.9s ease transform;
+    position: absolute;
+  }
+
+  #animatedLogo2 {
+    transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(4rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
+    transition: 0.9s ease transform;
+    position: absolute;
+  }
+
+  #animatedLogo3 {
+    transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(2rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
+    transition: 0.9s ease transform;
+    position: absolute;
+  }
+
+  .logoAnimation:hover > #animatedLogo1 {
+    transform: scale(1.5);
+  }
+
+  .logoAnimation:hover > #animatedLogo2 {
+    transform: scale(1.5);
+  }
+
+  .logoAnimation:hover > #animatedLogo3 {
+    transform: scale(1.5);
+  }
+}
+@media only screen and (min-width: 1281px) {
+  #error404 {
+    margin-top: -1em;
+  }
+
+  .screen1 {
+    background: url(https://i.postimg.cc/50kdJFsZ/404background.png) no-repeat top/cover fixed,
+      url(https://i.postimg.cc/fRFrT0R9/burger.png) no-repeat top 20% right/92% fixed;
+    height: 102vh;
+    padding: 0 8em;
+    padding-top: 15%;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .screen1 img {
+    display: block;
+  }
+  .screen2 {
+    height: 100vh;
+    padding: 0 10em;
+    padding-top: 10%;
+  }
+
+  #error404 ul {
+    padding-left: 1em;
+  }
+
+  .logoAnimation {
+    display: block;
+    margin-left: 25%;
+    margin-top: 25%;
+  }
+
+  #animatedLogo1 {
+    transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(6rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
+    transition: 0.9s ease transform;
+    position: absolute;
+  }
+
+  #animatedLogo2 {
+    transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(4rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
+    transition: 0.9s ease transform;
+    position: absolute;
+  }
+
+  #animatedLogo3 {
+    transform: scale(1) rotateY(-30deg) rotateX(45deg) translateZ(2rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.25));
+    transition: 0.9s ease transform;
+    position: absolute;
+  }
+
+  .logoAnimation:hover > #animatedLogo1 {
+    transform: scale(1.5);
+  }
+
+  .logoAnimation:hover > #animatedLogo2 {
+    transform: scale(1.5);
+  }
+
+  .logoAnimation:hover > #animatedLogo3 {
+    transform: scale(1.5);
+  }
 }

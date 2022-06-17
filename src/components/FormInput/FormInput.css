@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-inputs input,
+.form-inputs textarea {
+  border: 2px solid var(--dark-color);
+  background-color: var(--light-color);
+  font-family: "Josefin sans", sans-serif;
+  padding: 0.8em 0.8em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  resize: none;
+  color: var(--dark-color);
+}
+
+.form-inputs label {
+  font-size: 0.8em;
+  margin-bottom: 0.2em;
+  padding-left: 0.3em;
+  color: var(--dark-color);
+}
+
+.form-inputs .error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+.form-inputs .invalid {
+  border-color: red;
+}
+
+.form-inputs .valid {
+  border-color: green;
+}

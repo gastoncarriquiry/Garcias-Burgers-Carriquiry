@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import "./Cart.css";
 import { itemList } from "../../data/data";
+import SuggestedItem from "../../components/SuggestedItem/SuggestedItem";
 
 const Cart = () => {
   useDocumentTitle("Carrito | García's Burgers");
@@ -20,14 +21,13 @@ const Cart = () => {
     let randomNumber = Math.floor(Math.random() * (max + 1));
     let suggestedItem = itemList[randomNumber];
     return (
-      <article>
-        <div>
-          <img src={suggestedItem.picURL} alt={`Imagen de ${suggestedItem.title}`} />
-          <h3>{suggestedItem.title}</h3>
-          <h4>${suggestedItem.price}</h4>
-        </div>
-        <Button text="Agregar al Carrito" click={() => addSuggestion(suggestedItem)} />
-      </article>
+      <SuggestedItem
+        key={suggestedItem.title}
+        picURL={suggestedItem.picURL}
+        title={suggestedItem.title}
+        price={suggestedItem.price}
+        action={() => addSuggestion(suggestedItem)}
+      />
     );
   };
 
@@ -42,7 +42,7 @@ const Cart = () => {
         <div className="emptyOrder">
           <h1>¡Tu pedido está vacío!</h1>
           <h2>¿Qué estás esperando?</h2>
-          <Link to="/menu">
+          <Link to="/menu/hamburguesas">
             <Button text="Ver Menú" />
           </Link>
           <div className="suggestion">

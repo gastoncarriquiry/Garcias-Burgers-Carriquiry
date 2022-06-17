@@ -3,7 +3,29 @@
   padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .item {
+    width: 48%;
+  }
+
+  .item:nth-child(2n + 2),
+  .item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .item {
+    width: 48%;
+  }
+
+  .item:nth-child(2n + 2),
+  .item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1281px) {
   .item {
     width: 32%;
   }

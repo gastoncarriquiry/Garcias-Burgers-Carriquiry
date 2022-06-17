@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 import useDocumentTitle from "../../helpers/useDocumentTitle";
@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(true);
   useDocumentTitle(item.title + " | García's Burgers");
+  const navigate = useNavigate();
 
   const { id } = useParams();
 
@@ -19,8 +20,12 @@ const ItemDetailContainer = () => {
     const db = getFirestore();
     const dbQuery = doc(db, "products", `${id}`);
     getDoc(dbQuery)
-      .then((res) => setItem({ id: res.id, ...res.data() }))
-      .catch((err) => console.log(err))
+      .then((res) =>
+        res.data() === undefined
+          ? navigate("/error404", { replace: true })
+          : setItem({ id: res.id, ...res.data() })
+      )
+      .catch((err) => console.error(err))
       .finally(() => setLoading(false));
   }, [id]);
 

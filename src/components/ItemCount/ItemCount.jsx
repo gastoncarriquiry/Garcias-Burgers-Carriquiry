@@ -9,7 +9,7 @@ const ProductAdded = () => {
       <Link to="/carrito">
         <button className="btn finish">Finalizar Pedido</button>
       </Link>
-      <Link to="/menu">
+      <Link to="/menu/hamburguesas">
         <button className="btn">Pedir Más</button>
       </Link>
     </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import SecondaryNavBar from "../SecondaryNavBar/SecondaryNavBar";
 import Loader from "../Loader/Loader";
 import useDocumentTitle from "../../helpers/useDocumentTitle";
@@ -14,6 +14,8 @@ function ItemListContainer() {
 
   const { category } = useParams();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     setLoading(true);
 
@@ -23,7 +25,11 @@ function ItemListContainer() {
     if (category) {
       const queryFilter = query(queryCollection, where("category", "==", `${category}`));
       getDocs(queryFilter)
-        .then((res) => setItems(res.docs.map((item) => ({ id: item.id, ...item.data() }))))
+        .then((res) =>
+          res.docs.length === 0
+            ? navigate("/error404", { replace: true })
+            : setItems(res.docs.map((item) => ({ id: item.id, ...item.data() })))
+        )
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     } else {
@@ -35,7 +41,7 @@ function ItemListContainer() {
   }, [category]);
 
   return (
-    <main>
+    <main className="menu-cont">
       <SecondaryNavBar />
       <section className="item-list">{loading ? <Loader /> : <ItemList items={items} />}</section>
     </main>

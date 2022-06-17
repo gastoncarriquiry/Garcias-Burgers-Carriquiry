@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import FormInput from "../FormInput/FormInput";
+import "./PaymentForm.css";
 
 const PaymentForm = () => {
   useDocumentTitle("Pago | García's Burgers");
@@ -16,6 +17,7 @@ const PaymentForm = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    emailVerify: "",
     phone: "",
     address1: "",
     address2: "",
@@ -23,17 +25,19 @@ const PaymentForm = () => {
     validInputs: {
       name: false,
       email: false,
+      emailVerify: false,
       phone: false,
       address1: false,
     },
     errors: {
       name: "",
       email: "",
+      emailVerify: "",
       phone: "",
       address1: "",
     },
   });
-  const [formValid, setFormValid] = useState(false);
+  let formValid = false;
   const [formError, setFormError] = useState("");
   const delivery = useRef(null);
   const [orderSent, setOrderSent] = useState(false);
@@ -42,7 +46,14 @@ const PaymentForm = () => {
 
   const generateOrder = (evt) => {
     evt.preventDefault();
-    if (formValid) {
+
+    if (Object.values(form.validInputs).includes(false) === true) {
+      formValid = false;
+    } else {
+      formValid = true;
+    }
+
+    if (formValid === true) {
       setFormError("");
       setLoading(true);
       evt.target.setAttribute("disabled", true);
@@ -90,10 +101,11 @@ const PaymentForm = () => {
         .catch((err) => console.error(err))
         .finally(() => {
           clearCart();
+          formValid = false;
           setLoading(false);
         });
     } else {
-      setFormError("Asegúrese que todos los campos sean correctos.");
+      setFormError("❌ Asegúrese que todos los campos sean correctos.");
       setTimeout(() => {
         setFormError("");
       }, 5000);
@@ -123,7 +135,7 @@ const PaymentForm = () => {
   const handleChange = (evt) => {
     switch (evt.target.id) {
       case "inp_nombre":
-        if (isNaN(evt.key)) {
+        if (isNaN(evt.key) || evt.key === " ") {
           if (evt.target.value !== "") {
             setForm({
               ...form,
@@ -131,21 +143,27 @@ const PaymentForm = () => {
               validInputs: { ...form.validInputs, name: true },
               errors: { ...form.errors, name: "" },
             });
+            evt.target.classList.add("valid");
+            evt.target.classList.remove("invalid");
           } else {
             setForm({
               ...form,
               name: evt.target.value,
               validInputs: { ...form.validInputs, name: false },
-              errors: { ...form.errors, name: "Este campo no puede quedar vacío." },
+              errors: { ...form.errors, name: "" },
             });
+            evt.target.classList.remove("valid");
+            evt.target.classList.add("invalid");
           }
         } else {
           setForm({
             ...form,
             name: evt.target.value,
             validInputs: { ...form.validInputs, name: false },
-            errors: { ...form.errors, name: "Asegúrese de ingresar letras únicamente." },
+            errors: { ...form.errors, name: "❌ Asegúrese de ingresar letras únicamente." },
           });
+          evt.target.classList.remove("valid");
+          evt.target.classList.add("invalid");
         }
         break;
       case "inp_email":
@@ -158,6 +176,8 @@ const PaymentForm = () => {
               validInputs: { ...form.validInputs, email: true },
               errors: { ...form.errors, email: "" },
             });
+            evt.target.classList.add("valid");
+            evt.target.classList.remove("invalid");
           } else {
             setForm({
               ...form,
@@ -165,9 +185,11 @@ const PaymentForm = () => {
               validInputs: { ...form.validInputs, email: false },
               errors: {
                 ...form.errors,
-                email: "El correo ingresado no es correcto. Ej: garciasburger@gmail.com",
+                email: "❌ El correo ingresado no es correcto. Ej: garciasburger@gmail.com",
               },
             });
+            evt.target.classList.remove("valid");
+            evt.target.classList.add("invalid");
           }
         } else {
           setForm({
@@ -176,16 +198,56 @@ const PaymentForm = () => {
             validInputs: { ...form.validInputs, email: false },
             errors: {
               ...form.errors,
-              email: "Este campo no puede quedar vacío.",
+              email: "❌ Este campo no puede quedar vacío.",
             },
           });
+          evt.target.classList.remove("valid");
+          evt.target.classList.add("invalid");
+        }
+        break;
+      case "inp_emailVerify":
+        if (evt.target.value !== "") {
+          if (evt.target.value === form.email) {
+            setForm({
+              ...form,
+              emailVerify: evt.target.value,
+              validInputs: { ...form.validInputs, emailVerify: true },
+              errors: { ...form.errors, emailVerify: "" },
+            });
+            evt.target.classList.add("valid");
+            evt.target.classList.remove("invalid");
+          } else {
+            setForm({
+              ...form,
+              emailVerify: evt.target.value,
+              validInputs: { ...form.validInputs, emailVerify: false },
+              errors: {
+                ...form.errors,
+                emailVerify: "❌ El correo ingresado no coincide con el primero.",
+              },
+            });
+            evt.target.classList.remove("valid");
+            evt.target.classList.add("invalid");
+          }
+        } else {
+          setForm({
+            ...form,
+            emailVerify: evt.target.value,
+            validInputs: { ...form.validInputs, emailVerify: false },
+            errors: {
+              ...form.errors,
+              emailVerify: "❌ Este campo no puede quedar vacío.",
+            },
+          });
+          evt.target.classList.remove("valid");
+          evt.target.classList.add("invalid");
         }
         break;
       case "inp_phone":
         const regExpPhone =
           /^((09[1-9](\s?)([0-9]{3})(\s?)([0-9]{3}))|((2|4)(\s?)([0-9]{3})(\s?)([0-9]{2})(\s?)([0-9]{2})))$/g;
         if (evt.target.value !== "") {
-          if (!isNaN(evt.key) || evt.key === undefined) {
+          if (!isNaN(evt.key) || evt.key === undefined || evt.key === "Tab") {
             if (regExpPhone.test(evt.target.value)) {
               setForm({
                 ...form,
@@ -193,6 +255,8 @@ const PaymentForm = () => {
                 validInputs: { ...form.validInputs, phone: true },
                 errors: { ...form.errors, phone: "" },
               });
+              evt.target.classList.add("valid");
+              evt.target.classList.remove("invalid");
             } else {
               setForm({
                 ...form,
@@ -201,9 +265,11 @@ const PaymentForm = () => {
                 errors: {
                   ...form.errors,
                   phone:
-                    "Formato de teléfono inválido. Ejemplos de formatos aceptados: 098 075 725 (móvil) o 2603 4394 (fijo).",
+                    "❌ Formato de teléfono inválido. Ejemplos de formatos aceptados: 098 075 725 (móvil) o 2603 4394 (fijo).",
                 },
               });
+              evt.target.classList.remove("valid");
+              evt.target.classList.add("invalid");
             }
           } else {
             setForm({
@@ -212,9 +278,11 @@ const PaymentForm = () => {
               validInputs: { ...form.validInputs, phone: false },
               errors: {
                 ...form.errors,
-                phone: "Asegúrese de ingresar números únicamente.",
+                phone: "❌ Asegúrese de ingresar números únicamente.",
               },
             });
+            evt.target.classList.remove("valid");
+            evt.target.classList.add("invalid");
           }
         } else {
           setForm({
@@ -223,9 +291,11 @@ const PaymentForm = () => {
             validInputs: { ...form.validInputs, phone: false },
             errors: {
               ...form.errors,
-              phone: "Este campo no puede quedar vacío.",
+              phone: "❌ Este campo no puede quedar vacío.",
             },
           });
+          evt.target.classList.remove("valid");
+          evt.target.classList.add("invalid");
         }
         break;
       case "inp_address1":
@@ -237,21 +307,27 @@ const PaymentForm = () => {
               validInputs: { ...form.validInputs, address1: true },
               errors: { ...form.errors, address1: "" },
             });
+            evt.target.classList.add("valid");
+            evt.target.classList.remove("invalid");
           } else {
             setForm({
               ...form,
               address1: evt.target.value,
               validInputs: { ...form.validInputs, address1: false },
-              errors: { ...form.errors, address1: "Por favor incluya el número de puerta." },
+              errors: { ...form.errors, address1: "❌ Por favor incluya el número de puerta." },
             });
+            evt.target.classList.remove("valid");
+            evt.target.classList.add("invalid");
           }
         } else {
           setForm({
             ...form,
             address1: evt.target.value,
             validInputs: { ...form.validInputs, address1: false },
-            errors: { ...form.errors, address1: "Este campo no puede quedar vacío" },
+            errors: { ...form.errors, address1: "❌ Este campo no puede quedar vacío" },
           });
+          evt.target.classList.remove("valid");
+          evt.target.classList.add("invalid");
         }
         break;
       case "inp_address2":
@@ -263,23 +339,19 @@ const PaymentForm = () => {
       default:
         break;
     }
-
-    if (Object.values(form.validInputs).includes(false)) {
-      setFormValid(false);
-    } else {
-      setFormValid(true);
-    }
   };
 
   return (
     <section className="payment-form">
       {cartList.length > 0 ? (
         <form>
-          <div>
-            <button onClick={handleOnClick} className="active" ref={delivery}>
-              Delivery a domicilio
+          <div className="tabs">
+            <button onClick={handleOnClick} className="delivery active" ref={delivery}>
+              Envío
             </button>
-            <button onClick={handleOnClick}>Takeaway/Para llevar</button>
+            <button onClick={handleOnClick} className="takeaway">
+              Para llevar
+            </button>
           </div>
           <fieldset>
             <FormInput
@@ -301,6 +373,15 @@ const PaymentForm = () => {
               labelText="Correo Electrónico"
             />
             <FormInput
+              type="email"
+              id="inp_emailVerify"
+              placeholder="Ingrese de nuevo su correo"
+              value={form.emailVerify}
+              onAction={handleChange}
+              errorText={form.errors.emailVerify}
+              labelText="Repetir Correo Electrónico"
+            />
+            <FormInput
               type="tel"
               id="inp_phone"
               placeholder="Ej.: 098 075 725 o 2603 4394"
@@ -310,7 +391,7 @@ const PaymentForm = () => {
               labelText="Teléfono/Celular"
             />
             {isDelivery ? (
-              <div>
+              <div className="address-cont">
                 <FormInput
                   type="text"
                   id="inp_address1"
@@ -338,7 +419,7 @@ const PaymentForm = () => {
                 />
               </div>
             ) : (
-              <div>
+              <div className="takeaway-info">
                 <p>
                   Nuestro local se encuentra en Mariano Uriarte 6300 esq. Córcega. Estamos abiertos:
                 </p>
@@ -350,22 +431,26 @@ const PaymentForm = () => {
                 </ul>
               </div>
             )}
-            <Button type="submit" text="Enviar Pedido" click={(evt) => generateOrder(evt)} />
-            <p className="error">{formError}</p>
-            {loading ? <Loader /> : <></>}
+            <div className="submit">
+              {loading ? <Loader /> : <></>}
+              <Button type="submit" text="Enviar Pedido" click={(evt) => generateOrder(evt)} />
+              <p className="error">{formError}</p>
+            </div>
           </fieldset>
         </form>
       ) : orderSent ? (
-        <div>
+        <div className="success">
           <h2>¡PEDIDO EXITOSO!</h2>
           <IoCheckmarkCircleOutline />
-          <p>El código de referencia de su pedido es: {orderRef}</p>
+          <p>
+            El código de referencia de su pedido es: <br /> <i>{orderRef}</i>
+          </p>
           <Link to="/">
             <Button text="Volver al Inicio" click={() => setOrderSent(false)} />
           </Link>
         </div>
       ) : (
-        <div>
+        <div className="empty">
           <h1>No tenemos idea cómo llegaste hasta acá... ◐‿◑</h1>
           <h2>¡Andá y pedite algo rico!</h2>
           <Link to="/">

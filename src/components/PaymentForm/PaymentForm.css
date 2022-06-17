@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.payment-form {
+  padding-top: 2em;
+  width: 90vw;
+  height: 82vh;
+  margin: auto;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.payment-form fieldset {
+  border: none;
+  background: var(--background-color);
+  padding: 1em 1.5em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.payment-form .tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.payment-form .tabs button {
+  width: 100%;
+  min-height: 3em;
+  border: none;
+  color: var(--dark-color);
+  transition: 0.25s ease-in-out;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: rgb(215, 215, 215);
+  color: var(--primary-color);
+  box-sizing: border-box;
+}
+
+.payment-form .tabs button.takeaway {
+  box-shadow: 5px -5px 8px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.payment-form .tabs button.delivery {
+  box-shadow: -5px -5px 8px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.payment-form .tabs button:hover,
+.payment-form .tabs button:active {
+  background-color: rgb(215, 215, 215);
+}
+
+.payment-form .tabs button.active {
+  box-shadow: none;
+  background-color: var(--background-color);
+}
+
+.takeaway-info {
+  color: var(--dark-color);
+  margin-bottom: 1em;
+}
+
+.takeaway-info ul {
+  list-style-position: inside;
+  margin-top: 0.5em;
+}
+
+.payment-form .submit {
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+}
+
+.payment-form .submit .btn {
+  margin-top: 2em;
+}
+
+.payment-form .submit .error {
+  margin-top: 0.5em;
+  font-size: 0.8em;
+}
+
+.payment-form .empty {
+  text-align: center;
+}
+
+.payment-form .empty h1,
+.payment-form .empty h2,
+.payment-form .empty .btn {
+  margin-top: 1em;
+}
+
+.success {
+  background-color: var(--background-color);
+  padding: 2em;
+  text-align: center;
+  border-radius: 5px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -60%);
+}
+
+.success svg {
+  stroke: green;
+  font-size: 4em;
+}
+
+.success p i {
+  color: var(--primary-color);
+}
+
+.success .btn {
+  margin-top: 1em;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .payment-form {
+    width: 75vw;
+  }
+
+  .payment-form .tabs button {
+    padding: 1.8em 0.3em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .payment-form {
+    width: 90vw;
+    height: 60vh;
+    padding-top: 0;
+    padding-bottom: 2em;
+  }
+
+  .payment-form .tabs button {
+    padding: 1.8em 0.3em;
+  }
+
+  .success {
+    width: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .payment-form {
+    width: 70vw;
+    height: 75vh;
+    padding-top: 3em;
+    margin-bottom: 2em;
+  }
+
+  .payment-form .tabs button {
+    padding: 1.5em 0.3em;
+  }
+
+  .success {
+    width: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  .address-cont {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .address-cont .form-inputs {
+    flex-grow: 1;
+    width: 35%;
+  }
+
+  .address-cont .form-inputs:first-child {
+    margin-right: 1.5em;
+  }
+
+  .address-cont .form-inputs:last-child {
+    flex-grow: 2;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1281px) {
+  .payment-form {
+    width: 60vw;
+    height: 88vh;
+    padding-top: 3em;
+    margin-bottom: 5em;
+    padding-bottom: 0;
+  }
+
+  .payment-form .tabs button {
+    padding: 1.5em 0.3em;
+  }
+
+  .success {
+    width: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  .address-cont {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .address-cont .form-inputs {
+    flex-grow: 1;
+    width: 35%;
+  }
+
+  .address-cont .form-inputs:first-child {
+    margin-right: 1.5em;
+  }
+
+  .address-cont .form-inputs:last-child {
+    flex-grow: 2;
+    width: 100%;
+  }
+}

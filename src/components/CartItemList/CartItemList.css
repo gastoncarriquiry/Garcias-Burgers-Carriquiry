@@ -1,9 +1,36 @@
-@media only screen and (min-width: 768px) {
-    .CartItemList {
-        width: 65%;
-        padding-right: 1.5%;
-        overflow-y: scroll;
-        height: 72vh;
-        border-radius: 5px;
-    }
+.CartItemList {
+  overflow-y: scroll;
+  max-height: 50vh;
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .CartItemList {
+    padding-right: 0;
+    max-height: 45vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .CartItemList {
+    max-height: 55vh;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .CartItemList {
+    max-height: 74vh;
+    width: 65%;
+    padding-right: 1.5%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1281px) {
+  .CartItemList {
+    max-height: 74vh;
+    width: 65%;
+    padding-right: 1.5%;
+  }
 }

@@ -29,3 +29,9 @@
   background-color: var(--primary-color);
   color: var(--light-color);
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .btn {
+    font-size: 0.65em;
+  }
+}

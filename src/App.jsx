@@ -6,13 +6,12 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Home from "./layout/Home/Home";
 import Cart from "./layout/Cart/Cart";
 import Error404 from "./layout/Error404/Error404";
+import Footer from "./layout/Footer/Footer";
 import About from "./layout/About/About";
 import Contact from "./layout/Contact/Contact";
 import { CartContextProvider } from "./context/CartContext";
 import PaymentForm from "./components/PaymentForm/PaymentForm";
-//TODO: HOME, ABOUT page, error404, contact form, Footer
-//TODO: Fixes CSS mobile
-//TODO: @media for tablet and XL screens
+
 function App() {
   return (
     <BrowserRouter>
@@ -34,11 +33,11 @@ function App() {
             <Route path="/carrito" element={<Cart />} />
             {/* PAYMENT */}
             <Route path="/pago" element={<PaymentForm />} />
-            {/* <Route path="/*" element={<Navigate to="/" replace/>} /> PARA LOGIN USAR EL ATRIBUTO REPLACE */}
             {/* ERROR 404 */}
             <Route path="/error404" element={<Error404 />} />
             <Route path="/*" element={<Navigate to="/error404" />} />
           </Routes>
+          <Footer />
         </>
       </CartContextProvider>
     </BrowserRouter>

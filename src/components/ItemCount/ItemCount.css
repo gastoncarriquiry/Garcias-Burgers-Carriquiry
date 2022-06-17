@@ -22,7 +22,6 @@
   border: none;
   font-size: 1.5em;
   line-height: 0.5em;
-  /* padding: 0em 0.3em; */
   width: 1.5em;
   border-radius: 5px;
   height: 1.5em;
@@ -73,12 +72,27 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   opacity: 0;
   animation: fadeIn 0.7s ease-in-out forwards;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .buttons {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .buttons {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1281px) {
+  .buttons {
+    align-items: flex-start;
+  }
 }
 
 @keyframes fadeIn {

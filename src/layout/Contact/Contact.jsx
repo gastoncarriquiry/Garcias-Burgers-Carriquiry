@@ -1,12 +1,17 @@
-import './Contact.css'
-import useDocumentTitle from "../../helpers/useDocumentTitle"
+import "./Contact.css";
+import useDocumentTitle from "../../helpers/useDocumentTitle";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const Contact = () => {
-  useDocumentTitle("Contacto | García's Burgers")
-  //TODO: this
-  return (
-    <div>Contact</div>
-  )
-}
+  useDocumentTitle("Contacto | García's Burgers");
 
-export default Contact
+  return (
+    <main className="contact">
+      <div className="cont">
+        <ContactForm />
+      </div>
+    </main>
+  );
+};
+
+export default Contact;

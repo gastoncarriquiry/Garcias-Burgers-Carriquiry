@@ -1,12 +1,11 @@
 import "./HamburgerMenu.css";
 import { useRef } from "react";
 
-//TODO: close hamburger menu when navigated or click outside
 function HamburgerMenu() {
-  const nav = document.querySelector("#nav");
+  const nav = useRef(null);
   const hamburgerAction = () => {
-    nav.classList.toggle("is-active");
-    if (nav.classList.contains("is-active")) {
+    nav.current.classList.toggle("is-active");
+    if (nav.current.classList.contains("is-active")) {
       document.querySelector(".links").style.display = "block";
     } else {
       document.querySelector(".links").style.display = "none";
@@ -14,9 +13,9 @@ function HamburgerMenu() {
   };
 
   document.addEventListener("click", (evt) => {
-    let checkClickInNav = nav.contains(evt.target);
-    if (!checkClickInNav && nav.classList.contains("is-active")) {
-      document.querySelector("#nav").classList.remove("is-active");
+    let checkClickInNav = nav.current.contains(evt.target);
+    if (!checkClickInNav && nav.current.classList.contains("is-active")) {
+      nav.current.classList.remove("is-active");
       document.querySelector(".links").style.display = "none";
     }
   });
@@ -25,6 +24,7 @@ function HamburgerMenu() {
     <button
       className="nav-toggle hamburger--collapse hamburger"
       id="nav"
+      ref={nav}
       type="button"
       onClick={hamburgerAction}
     >

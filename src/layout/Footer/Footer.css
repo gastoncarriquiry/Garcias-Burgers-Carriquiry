@@ -1,0 +1,206 @@
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 1em;
+    padding-top: 3em;
+}
+
+#root>section,
+#root>main {
+    min-height: 100vh;
+}
+
+footer .container {
+    border-bottom: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .container>div {
+    width: 100%;
+}
+
+footer .container .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--light-color);
+}
+
+footer .container .links-container .useful-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 0.8em;
+    column-gap: 0.5em;
+}
+
+footer .container .links-container .useful-links a {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+}
+
+footer .container .links-container .socials a {
+    font-size: 1.5em;
+    margin-right: 1em;
+    padding: 0.2em;
+}
+
+footer .container .links-container .socials a:last-child {
+    margin-right: 0;
+}
+
+footer a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+footer .container .rights {
+    text-align: center;
+}
+
+footer .container .rights p {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+footer .container .rights div p {
+    font-size: 0.7em;
+}
+
+footer .container .rights div a {
+    display: inline-block;
+    font-size: 1em;
+    padding: 0.1em;
+    margin-right: 0.3em;
+}
+
+footer .container .rights div a:last-child {
+    margin-right: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    footer .container .links-container .useful-links {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    footer .container .links-container .useful-links {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    footer .container {
+        width: 90vw;
+    }
+
+    footer .container .links-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .container .links-container .socials a {
+        margin-right: 0.5em;
+    }
+
+    footer .container .rights {
+        text-align: start;
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .container .rights p {
+        display: block;
+    }
+
+    footer .container .rights>div>div {
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    footer .container .links-container .useful-links {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    footer .container {
+        width: 90vw;
+    }
+
+    footer .container .links-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0.5em;
+    }
+
+    footer .container .links-container .socials a {
+        margin-right: 0.5em;
+    }
+
+    footer .container .rights {
+        text-align: start;
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .container .rights p {
+        display: block;
+    }
+
+    footer .container .rights>div>div {
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    footer .container .links-container .useful-links {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    footer .container {
+        width: 90vw;
+    }
+
+    footer .container .links-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0.5em;
+    }
+
+    footer .container .links-container .socials a {
+        margin-right: 0.5em;
+    }
+
+    footer .container .rights {
+        text-align: start;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    footer .container .rights p {
+        display: block;
+    }
+
+    footer .container .rights>div>div {
+        text-align: right;
+    }
+}
