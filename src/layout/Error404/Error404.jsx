@@ -1,6 +1,6 @@
-import "./Error404.css";
 import { Link } from "react-router-dom";
-import useDocumentTitle from "../../helpers/useDocumentTitle";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
+import "./Error404.css";
 
 const Error404 = () => {
   useDocumentTitle("Error 404 | García's Burgers");

@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import "./ItemDetailContainer.css";
-import useDocumentTitle from "../../helpers/useDocumentTitle";
 import Loader from "../Loader/Loader";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
@@ -18,16 +18,16 @@ const ItemDetailContainer = () => {
     setLoading(true);
 
     const db = getFirestore();
-    const dbQuery = doc(db, "products", `${id}`);
+    const dbQuery = doc(db, "products", id);
     getDoc(dbQuery)
       .then((res) =>
         res.data() === undefined
           ? navigate("/error404", { replace: true })
           : setItem({ id: res.id, ...res.data() })
       )
-      .catch((err) => console.error(err))
+      .catch(console.error)
       .finally(() => setLoading(false));
-  }, [id]);
+  }, [id, navigate]);
 
   return (
     <section className="item-detail-container">

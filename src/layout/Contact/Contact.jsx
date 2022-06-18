@@ -1,6 +1,6 @@
-import "./Contact.css";
-import useDocumentTitle from "../../helpers/useDocumentTitle";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
+import "./Contact.css";
 
 const Contact = () => {
   useDocumentTitle("Contacto | García's Burgers");

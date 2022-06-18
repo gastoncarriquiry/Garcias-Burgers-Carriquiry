@@ -61,7 +61,7 @@ const CartContextProvider = (props) => {
   const sumItem = (quantity, id) => {
     if (quantity <= 49) {
       if (quantity === 50) {
-        console.log("No puede seleccionar más productos.");
+        console.warn("No puede seleccionar más productos.");
       }
       for (const item in cartList) {
         if (cartList[item].id === id) {
@@ -71,11 +71,10 @@ const CartContextProvider = (props) => {
       }
     }
   };
-
   const subtractItem = (quantity, id) => {
     if (quantity > 1) {
       if (quantity === 1) {
-        console.log("Límite mínimo de orden.");
+        console.warn("Límite mínimo de orden.");
       }
       for (const item in cartList) {
         if (cartList[item].id === id) {

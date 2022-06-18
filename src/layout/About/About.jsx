@@ -1,5 +1,5 @@
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 import "./About.css";
-import useDocumentTitle from "../../helpers/useDocumentTitle";
 
 const About = () => {
   useDocumentTitle("Nosotros | García's Burgers");

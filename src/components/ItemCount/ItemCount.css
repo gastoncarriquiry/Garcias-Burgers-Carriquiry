@@ -58,9 +58,9 @@
 
 .finish {
   margin-bottom: 1em;
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  border-color: var(--dark-color);
+  background-color: var(--light-color) !important;
+  color: var(--dark-color) !important;
+  border-color: var(--dark-color) !important;
 }
 
 .buttons a {
@@ -99,6 +99,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

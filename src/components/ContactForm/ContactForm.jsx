@@ -1,6 +1,6 @@
-import FormInput from "../../components/FormInput/FormInput";
-import Button from "../../components/Button/Button";
 import { useState } from "react";
+import Button from "../../components/Button/Button";
+import FormInput from "../../components/FormInput/FormInput";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -19,62 +19,63 @@ const ContactForm = () => {
     },
     formError: "",
   });
+
   const handleChange = (evt) => {
+    const handleForm = (field, isValid, message) => {
+      switch (field) {
+        case "name":
+          setForm({
+            ...form,
+            name: evt.target.value,
+            validInputs: { ...form.validInputs, name: isValid },
+            errors: { ...form.errors, name: message },
+          });
+          break;
+        case "email":
+          setForm({
+            ...form,
+            email: evt.target.value,
+            validInputs: { ...form.validInputs, email: isValid },
+            errors: { ...form.errors, email: message },
+          });
+          break;
+        case "message":
+          setForm({
+            ...form,
+            message: evt.target.value,
+            validInputs: { ...form.validInputs, message: isValid },
+            errors: { ...form.errors, message: message },
+          });
+          break;
+        default:
+          break;
+      }
+    };
     switch (evt.target.id) {
       case "contact_name":
         if (evt.target.value === "") {
-          setForm({
-            ...form,
-            name: evt.target.value,
-            validInputs: { ...form.validInputs, name: false },
-            errors: { ...form.errors, name: "❌ Este campo no puede quedar vacío." },
-          });
+          handleForm("name", false, "❌ Este campo no puede quedar vacío.");
           evt.target.classList.add("invalid");
         } else {
-          setForm({
-            ...form,
-            name: evt.target.value,
-            validInputs: { ...form.validInputs, name: true },
-            errors: { ...form.errors, name: "" },
-          });
+          handleForm("name", true, "");
           evt.target.classList.remove("invalid");
         }
         break;
       case "contact_email":
         if (evt.target.value === "") {
-          setForm({
-            ...form,
-            email: evt.target.value,
-            validInputs: { ...form.validInputs, email: false },
-            errors: { ...form.errors, email: "❌ Este campo no puede quedar vacío." },
-          });
+          handleForm("email", false, "❌ Este campo no puede quedar vacío.");
           evt.target.classList.add("invalid");
         } else {
-          setForm({
-            ...form,
-            email: evt.target.value,
-            validInputs: { ...form.validInputs, email: true },
-            errors: { ...form.errors, email: "" },
-          });
+          handleForm("email", true, "");
           evt.target.classList.remove("invalid");
         }
         break;
       case "contact_message":
         if (evt.target.value === "") {
-          setForm({
-            ...form,
-            message: evt.target.value,
-            validInputs: { ...form.validInputs, message: false },
-            errors: { ...form.errors, message: "❌ Este campo no puede quedar vacío." },
-          });
+          handleForm("message", false, "❌ Este campo no puede quedar vacío.");
           evt.target.classList.add("invalid");
         } else {
-          setForm({
-            ...form,
-            message: evt.target.value,
-            validInputs: { ...form.validInputs, message: true },
-            errors: { ...form.errors, message: "" },
-          });
+          handleForm("message", true, "");
           evt.target.classList.remove("invalid");
         }
         break;
@@ -82,11 +83,12 @@ const ContactForm = () => {
   };
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log(form.validInputs);
     if (Object.values(form.validInputs).includes(false)) {
       setForm({ ...form, formError: "❌ Algún campo quedó vacío." });
     } else {
-      console.log("Se envía el mensaje.");
+      alert(
+        "Tu mensaje fue enviado correctamente. Nos pondremos en contacto contigo a la brevedad."
+      );
     }
   };
   return (

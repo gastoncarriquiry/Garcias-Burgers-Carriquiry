@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import "./Footer.css";
 import {
   IoGlobeOutline,
   IoLogoFacebook,
-  IoLogoInstagram,
   IoLogoGithub,
+  IoLogoInstagram,
   IoLogoLinkedin,
   IoLogoWhatsapp,
 } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 const Footer = () => {
   return (
     <footer>

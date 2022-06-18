@@ -1,9 +1,9 @@
-import "./NavBar.css";
 import { useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
+import BrandLogo from "../BrandLogo/BrandLogo";
 import CartWidget from "../CartWidget/CartWidget";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import BrandLogo from "../BrandLogo/BrandLogo";
+import "./NavBar.css";
 
 function NavBar() {
   const navBar = useRef(null);

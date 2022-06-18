@@ -1,5 +1,5 @@
-import "./HomeCard.css";
 import { Link } from "react-router-dom";
+import "./HomeCard.css";
 
 const HomeCard = ({ imgSrc, title, text, where }) => {
   return (

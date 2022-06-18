@@ -1,16 +1,16 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import Home from "./layout/Home/Home";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
+import PaymentForm from "./components/PaymentForm/PaymentForm";
+import { CartContextProvider } from "./context/CartContext";
+import About from "./layout/About/About";
 import Cart from "./layout/Cart/Cart";
+import Contact from "./layout/Contact/Contact";
 import Error404 from "./layout/Error404/Error404";
 import Footer from "./layout/Footer/Footer";
-import About from "./layout/About/About";
-import Contact from "./layout/Contact/Contact";
-import { CartContextProvider } from "./context/CartContext";
-import PaymentForm from "./components/PaymentForm/PaymentForm";
+import Home from "./layout/Home/Home";
+import "./App.css";
 
 function App() {
   return (

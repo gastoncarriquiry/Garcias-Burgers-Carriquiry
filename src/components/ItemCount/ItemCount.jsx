@@ -28,7 +28,7 @@ const ItemCount = ({ available, initial, onAdd }) => {
     if (quantity <= 49) {
       setQuantity(quantity + 1);
       if (quantity === 50) {
-        console.log("No puede seleccionar más productos.");
+        console.warn("No puede seleccionar más productos.");
       }
     }
   };
@@ -37,7 +37,7 @@ const ItemCount = ({ available, initial, onAdd }) => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     } else if (quantity === 1) {
-      console.log("Debe seleccionar al menos un producto.");
+      console.warn("Debe seleccionar al menos un producto.");
     }
   };
 

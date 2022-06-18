@@ -1,7 +1,7 @@
-import "./ItemDetail.css";
-import ItemCount from ".././ItemCount/ItemCount";
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
+import ItemCount from ".././ItemCount/ItemCount";
+import "./ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
   const {
@@ -101,8 +101,6 @@ const ItemDetail = ({ item }) => {
     } else {
       addProduct(qty);
     }
-    console.log(cartList);
-    localStorage.setItem("cartList", cartList);
   };
 
   const handleOnChange = (position) => {

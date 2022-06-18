@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 import "./Item.css";
 
 const Item = ({ item }) => {
-  const { id, title, category, description,additionals, extras, picURL, price, available, initial } = item;
+  const { id, title, category, additionals, picURL, price } = item;
 
   return (
     <article className="item" key={id}>

@@ -1,35 +1,15 @@
-import CartItemList from "../../components/CartItemList/CartItemList";
-import useDocumentTitle from "../../helpers/useDocumentTitle";
-import OrderSummary from "../../components/OrderSumarry/OrderSummary";
-import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import CartItemList from "../../components/CartItemList/CartItemList";
+import OrderSummary from "../../components/OrderSumarry/OrderSummary";
+import SuggestItem from "../../components/SuggestItem/SuggestItem";
+import { useCartContext } from "../../context/CartContext";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 import "./Cart.css";
-import { itemList } from "../../data/data";
-import SuggestedItem from "../../components/SuggestedItem/SuggestedItem";
 
 const Cart = () => {
   useDocumentTitle("Carrito | García's Burgers");
-  const { cartList, addToCart } = useCartContext();
-
-  const addSuggestion = (item) => {
-    addToCart({ ...item, quantity: 1 });
-  };
-
-  const suggestItem = () => {
-    const max = itemList.length - 1;
-    let randomNumber = Math.floor(Math.random() * (max + 1));
-    let suggestedItem = itemList[randomNumber];
-    return (
-      <SuggestedItem
-        key={suggestedItem.title}
-        picURL={suggestedItem.picURL}
-        title={suggestedItem.title}
-        price={suggestedItem.price}
-        action={() => addSuggestion(suggestedItem)}
-      />
-    );
-  };
+  const { cartList } = useCartContext();
 
   return (
     <section className="Cart">
@@ -45,10 +25,7 @@ const Cart = () => {
           <Link to="/menu/hamburguesas">
             <Button text="Ver Menú" />
           </Link>
-          <div className="suggestion">
-            <h3>Probá esto...</h3>
-            <div>{suggestItem()}</div>
-          </div>
+          <SuggestItem />
         </div>
       )}
     </section>

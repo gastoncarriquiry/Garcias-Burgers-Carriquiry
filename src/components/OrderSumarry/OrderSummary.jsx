@@ -1,9 +1,9 @@
-import { useCartContext } from "../../context/CartContext";
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 import Button from "../Button/Button";
-import "./OrderSummary.css";
 import OrderItem from "../OrderItem/OrderItem";
+import "./OrderSummary.css";
 
 const OrderSummary = () => {
   const { cartList, clearCart, getTotal } = useCartContext();

@@ -1,6 +1,6 @@
-import { IoRemoveCircleOutline, IoAdd, IoRemove } from "react-icons/io5";
-import "./CartItem.css";
+import { IoAdd, IoRemove, IoRemoveCircleOutline } from "react-icons/io5";
 import { useCartContext } from "../../context/CartContext";
+import "./CartItem.css";
 
 const CartItem = ({ item }) => {
   const { removeItem, totalPrice, sumItem, subtractItem } = useCartContext();

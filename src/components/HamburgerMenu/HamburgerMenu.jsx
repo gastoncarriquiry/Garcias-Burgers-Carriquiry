@@ -1,5 +1,5 @@
-import "./HamburgerMenu.css";
 import { useRef } from "react";
+import "./HamburgerMenu.css";
 
 function HamburgerMenu() {
   const nav = useRef(null);

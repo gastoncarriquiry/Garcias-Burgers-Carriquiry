@@ -1,10 +1,10 @@
-import useDocumentTitle from "../../helpers/useDocumentTitle";
-import Button from "../../components/Button/Button";
-import { Link } from "react-router-dom";
-import "./Home.css";
-import HomeCard from "../../components/HomeCard/HomeCard";
-import FormInput from "../../components/FormInput/FormInput";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button/Button";
+import FormInput from "../../components/FormInput/FormInput";
+import HomeCard from "../../components/HomeCard/HomeCard";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
+import "./Home.css";
 
 const Home = () => {
   useDocumentTitle("Inicio | García's Burgers");
