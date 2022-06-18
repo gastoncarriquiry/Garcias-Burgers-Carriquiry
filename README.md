@@ -6,9 +6,9 @@ This project was done using React Js within the framework of the [Coderhouse Rea
 
 This project has an academic purpose and image rights belong exclusively to García’s Burgers. This project was not done, by any means, seeking profit.
 ## Demo
+[![Project's Demo](https://i.postimg.cc/Yq1NcTDC/demo.gif)](https://postimg.cc/rKwRxZLB)
 
-Insert gif or link to demo
-
+If demo gif does not load, please refer to [Postimg](https://i.postimg.cc/Yq1NcTDC/demo.gif) or [YouTube](https://youtu.be/RkqmZtGxQGU).
 
 ## Dependencies
 
@@ -22,6 +22,8 @@ Insert gif or link to demo
 ## Deployment
 
 This project was deployed in Netlify/Vercel. Check it out [here]().
+
+![Project's Front Page](https://i.postimg.cc/W11Pgw0s/front-Page.png)
 
 
 
