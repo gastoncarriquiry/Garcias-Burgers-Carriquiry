@@ -20,12 +20,11 @@ If demo gif does not load, please refer to [Postimg](https://i.postimg.cc/Yq1NcT
 
 
 ## Deployment
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eee1b9d8-d315-4e0e-ab78-f7e22933dd63/deploy-status)](https://app.netlify.com/sites/garciasburgers/deploys)
 
-This project was deployed in Netlify/Vercel. Check it out [here]().
+This project was deployed in Netlify. Check it out [here](https://garciasburgers.netlify.app/).
 
 ![Project's Front Page](https://i.postimg.cc/W11Pgw0s/front-Page.png)
-
-
 
 ## Run Locally
 
