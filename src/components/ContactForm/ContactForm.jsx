@@ -79,6 +79,8 @@ const ContactForm = () => {
           evt.target.classList.remove("invalid");
         }
         break;
+      default:
+        break;
     }
   };
   const handleSubmit = (evt) => {

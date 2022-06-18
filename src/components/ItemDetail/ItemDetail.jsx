@@ -116,8 +116,8 @@ const ItemDetail = ({ item }) => {
       return sum;
     }, 0);
 
-    let filterExtras = updatedCheckedState.map((bool, index) => {
-      if (bool === true) {
+    const filterExtras = updatedCheckedState.map((bool, index) => {
+      if (bool) {
         return extras[index];
       }
     });
